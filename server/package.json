@@ -1,0 +1,27 @@
+{
+  "name": "data-graph",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently -k npm:start:*",
+    "start:gateway": "nodemon -w gateway gateway/app.ts",
+    "start:core": "nodemon -w core core/app.ts",
+    "start:facebook": "nodemon -w facebook facebook/app.ts",
+    "start:google": "nodemon -w google google/app.ts",
+    "start:instagram": "nodemon -w instagram instagram/app.ts",
+    "start:netflix": "nodemon -w netflix netflix/app.ts",
+    "start:spotify": "nodemon -w spotify spotify/app.ts"
+  },
+  "dependencies": {
+    "@apollo/federation": "^0.36.1",
+    "@apollo/gateway": "^2.0.1",
+    "apollo-server": "^3.6.7",
+    "graphql": "^16.3.0"
+  },
+  "devDependencies": {
+    "concurrently": "^7.1.0",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
+  }
+}
