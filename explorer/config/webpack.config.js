@@ -311,6 +311,7 @@ module.exports = function (webpackEnv) {
       // for React Native Web.
       extensions: [".ts", ".tsx", ".mjs", ".js", ".jsx"],
       alias: {
+        '@shared': `${paths.appSrc}/shared/`,
         // Support React Native Web
         // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
         "react-native": "react-native-web",

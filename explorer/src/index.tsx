@@ -3,9 +3,14 @@ import ReactDOM from "react-dom";
 import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import { theme } from '@shared/theme';
 
 ReactDOM.render(
-  <App />,
+  <ThemeProvider theme={theme}>
+    <CssBaseline />
+    <App />
+  </ThemeProvider>,
   document.getElementById("root") as HTMLElement
 );
 
