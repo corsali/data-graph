@@ -1,8 +1,10 @@
 const { resolve } = require("path");
 const glob = require("glob");
 
+console.log({ asd: resolve(__dirname, "./shared/") });
 const alias = {
-  src: resolve(__dirname, "./api/"),
+  "@api": resolve(__dirname, "./api/"),
+  "@shared": resolve(__dirname, "./shared/"),
 };
 
 const entries = glob.sync("./api/*").reduce(function (entries, entry) {

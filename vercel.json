@@ -1,4 +1,0 @@
-{
-  "cleanUrls": true,
-  "functions": { "**/*/index.ts": { "memory": 3008 } }
-}
