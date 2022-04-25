@@ -1,7 +1,6 @@
 import { ApolloServer, gql } from "apollo-server";
 import { buildSubgraphSchema } from "@apollo/subgraph";
-
-const port = 4004;
+import { localPortsConfig } from "../../shared";
 
 const typeDefs = gql`
   type Movie {
@@ -28,11 +27,11 @@ const resolvers = {
   },
 };
 
-const server = new ApolloServer({
+const netflix = new ApolloServer({
   schema: buildSubgraphSchema([{ typeDefs, resolvers }]),
   introspection: true,
 });
 
-server.listen({ port }).then(({ url }) => {
+netflix.listen({ port: localPortsConfig.netflix }).then(({ url }) => {
   console.log(`Netflix service ready at ${url}`);
 });

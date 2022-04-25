@@ -1,5 +1,5 @@
-// TODO: webpack aliased import not working on vercel serverless correctly
-const localPortsConfig = {
+// TODO: fix webpack aliased import not working on vercel serverless correctly
+export const localPortsConfig = {
   core: 4000,
   facebook: 4001,
   google: 4002,
@@ -14,6 +14,8 @@ const baseUrl = process.env.VERCEL_URL;
 export const serviceList = Object.entries(localPortsConfig).map(
   ([name, port]) => ({
     name,
-    url: baseUrl ? `https://${baseUrl}/api/${name}` : `http://localhost:${port}`,
+    url: baseUrl
+      ? `https://${baseUrl}/api/${name}`
+      : `http://localhost:${port}`,
   })
 );

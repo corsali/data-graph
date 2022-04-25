@@ -1,7 +1,6 @@
 import { ApolloServer, gql } from "apollo-server";
 import { buildSubgraphSchema } from "@apollo/subgraph";
-
-const port = 4000;
+import { localPortsConfig } from "../../shared";
 
 const typeDefs = gql`
   type User @key(fields: "id") {
@@ -30,11 +29,11 @@ const resolvers = {
   },
 };
 
-const server = new ApolloServer({
+const core = new ApolloServer({
   schema: buildSubgraphSchema([{ typeDefs, resolvers }]),
   introspection: true,
 });
 
-server.listen({ port }).then(({ url }) => {
+core.listen({ port: localPortsConfig.core }).then(({ url }) => {
   console.log(`Core service ready at ${url}`);
 });

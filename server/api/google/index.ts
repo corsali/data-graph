@@ -1,7 +1,6 @@
 import { ApolloServer, gql } from "apollo-server";
 import { buildSubgraphSchema } from "@apollo/subgraph";
-
-const port = 4002;
+import { localPortsConfig } from "../../shared";
 
 const typeDefs = gql`
   type Google {
@@ -18,17 +17,19 @@ const resolvers = {
   User: {
     async google(user: any) {
       console.log(user);
-      
-      return { searchHistory: ['recipe pancakes', 'capital of Indonesia', user.id] };
+
+      return {
+        searchHistory: ["recipe pancakes", "capital of Indonesia", user.id],
+      };
     },
   },
 };
 
-const server = new ApolloServer({
+const google = new ApolloServer({
   schema: buildSubgraphSchema([{ typeDefs, resolvers }]),
   introspection: true,
 });
 
-server.listen({ port }).then(({ url }) => {
+google.listen({ port: localPortsConfig.google }).then(({ url }) => {
   console.log(`Google service ready at ${url}`);
 });

@@ -5,10 +5,10 @@ import { Playground, store } from "graphql-playground-react";
 import { PlaygroundWrapperProps } from "graphql-playground-react/lib/components/PlaygroundWrapper";
 import { VNButton, DeepPartial } from "./shared";
 
-// const endpoint = "http://localhost:4100";
-const endpoint = "https://server-silk-one.vercel.app/api/gateway";
-const baseFormUrl =
-  "https://docs.google.com/forms/d/e/1FAIpQLSflSJE8cn3jEvWgw3IBMRBJST0GUWIGokCnT620A3dc97qETw/viewform?embedded=true&usp=pp_url";
+const baseUrl = process.env.REACT_APP_API_URL;
+const endpoint = `${baseUrl}/api/gateway`;
+
+const formUrl = process.env.REACT_APP_FORM_URL;
 const App = () => {
   const [formsUrl, setFormsUrl] = React.useState("");
   const onCopy = () => {
@@ -19,9 +19,9 @@ const App = () => {
       .map((c, i) => (c.textContent || "").replace(i + 1 + "", ""))
       .join("\n");
 
-    // TODO: use proper form wrapper https://www.npmjs.com/package/react-google-forms-hooks
+    // TODO: use modal
     setFormsUrl(
-      `${baseFormUrl}&entry.214069913=${encodeURIComponent(query).replaceAll(
+      `${formUrl}&entry.214069913=${encodeURIComponent(query).replaceAll(
         "%20",
         "+"
       )}`

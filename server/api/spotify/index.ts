@@ -1,7 +1,6 @@
 import { ApolloServer, gql } from "apollo-server";
 import { buildSubgraphSchema } from "@apollo/subgraph";
-
-const port = 4005;
+import { localPortsConfig } from "../../shared";
 
 const typeDefs = gql`
   type Song {
@@ -28,11 +27,11 @@ const resolvers = {
   },
 };
 
-const server = new ApolloServer({
+const spotify = new ApolloServer({
   schema: buildSubgraphSchema([{ typeDefs, resolvers }]),
   introspection: true,
 });
 
-server.listen({ port }).then(({ url }) => {
+spotify.listen({ port: localPortsConfig.spotify }).then(({ url }) => {
   console.log(`Spotify service ready at ${url}`);
 });

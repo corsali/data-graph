@@ -1,7 +1,6 @@
 import { ApolloServer, gql } from "apollo-server";
 import { buildSubgraphSchema } from "@apollo/subgraph";
-
-const port = 4001;
+import { localPortsConfig } from "../../shared";
 
 const typeDefs = gql`
   type Page {
@@ -28,11 +27,11 @@ const resolvers = {
   },
 };
 
-const server = new ApolloServer({
+const facebook = new ApolloServer({
   schema: buildSubgraphSchema([{ typeDefs, resolvers }]),
   introspection: true,
 });
 
-server.listen({ port }).then(({ url }) => {
+facebook.listen({ port: localPortsConfig.facebook }).then(({ url }) => {
   console.log(`Facebook service ready at ${url}`);
 });

@@ -1,7 +1,6 @@
 import { ApolloServer, gql } from "apollo-server";
 import { buildSubgraphSchema } from "@apollo/subgraph";
-
-const port = 4003;
+import { localPortsConfig } from "../../shared";
 
 const typeDefs = gql`
   type InstagramAccount {
@@ -28,11 +27,11 @@ const resolvers = {
   },
 };
 
-const server = new ApolloServer({
+const instagram = new ApolloServer({
   schema: buildSubgraphSchema([{ typeDefs, resolvers }]),
   introspection: true,
 });
 
-server.listen({ port }).then(({ url }) => {
+instagram.listen({ port: localPortsConfig.instagram }).then(({ url }) => {
   console.log(`Instagram service ready at ${url}`);
 });
