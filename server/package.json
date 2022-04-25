@@ -3,14 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "vercel:install": "npm-install-if-needed",
+    "build": "webpack",
     "start": "concurrently -k npm:start:*",
-    "start:gateway": "nodemon -w gateway gateway/app.ts",
-    "start:core": "nodemon -w core core/app.ts",
-    "start:facebook": "nodemon -w facebook facebook/app.ts",
-    "start:google": "nodemon -w google google/app.ts",
-    "start:instagram": "nodemon -w instagram instagram/app.ts",
-    "start:netflix": "nodemon -w netflix netflix/app.ts",
-    "start:spotify": "nodemon -w spotify spotify/app.ts"
+    "start:gateway": "nodemon -w api/gateway api/gateway/index.ts",
+    "start:core": "nodemon -w api/core api/core/index.ts",
+    "start:facebook": "nodemon -w api/facebook api/facebook/index.ts",
+    "start:google": "nodemon -w api/google api/google/index.ts",
+    "start:instagram": "nodemon -w api/instagram api/instagram/index.ts",
+    "start:netflix": "nodemon -w api/netflix api/netflix/index.ts",
+    "start:spotify": "nodemon -w api/spotify api/spotify/index.ts"
   },
   "dependencies": {
     "@apollo/federation": "^0.36.1",
@@ -21,7 +23,11 @@
   "devDependencies": {
     "concurrently": "^7.1.0",
     "nodemon": "^2.0.15",
+    "npm-install-if-needed": "^1.0.17",
+    "ts-loader": "^9.2.8",
     "ts-node": "^10.7.0",
-    "typescript": "^4.6.3"
+    "typescript": "^4.6.3",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2"
   }
 }

@@ -1,6 +1,5 @@
 import { ApolloServer, gql } from "apollo-server";
 import { buildSubgraphSchema } from "@apollo/subgraph";
-import fetch from "node-fetch";
 
 const port = 4000;
 
@@ -33,6 +32,7 @@ const resolvers = {
 
 const server = new ApolloServer({
   schema: buildSubgraphSchema([{ typeDefs, resolvers }]),
+  introspection: true,
 });
 
 server.listen({ port }).then(({ url }) => {

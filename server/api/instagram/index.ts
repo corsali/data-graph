@@ -30,6 +30,7 @@ const resolvers = {
 
 const server = new ApolloServer({
   schema: buildSubgraphSchema([{ typeDefs, resolvers }]),
+  introspection: true,
 });
 
 server.listen({ port }).then(({ url }) => {

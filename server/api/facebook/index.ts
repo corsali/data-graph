@@ -1,37 +1,38 @@
 import { ApolloServer, gql } from "apollo-server";
 import { buildSubgraphSchema } from "@apollo/subgraph";
 
-const port = 4005;
+const port = 4001;
 
 const typeDefs = gql`
-  type Song {
+  type Page {
     id: ID!
     title: String!
-    author: String!
+    description: String
   }
 
-  type Spotify {
-    likedSongs: [Song]
+  type Facebook {
+    likedPages: [Page]
   }
 
   extend type User @key(fields: "id") {
     id: ID!
-    spotify: Spotify!
+    facebook: Facebook!
   }
 `;
 
 const resolvers = {
   User: {
-    async spotify(user: any) {
-      return { likedSongs: [{ id: "12", title: user.id, author: user.id }] };
+    async facebook(user: any) {
+      return { likedPages: [{ id: "12", title: user.id }] };
     },
   },
 };
 
 const server = new ApolloServer({
   schema: buildSubgraphSchema([{ typeDefs, resolvers }]),
+  introspection: true,
 });
 
 server.listen({ port }).then(({ url }) => {
-  console.log(`Spotify service ready at ${url}`);
+  console.log(`Facebook service ready at ${url}`);
 });
