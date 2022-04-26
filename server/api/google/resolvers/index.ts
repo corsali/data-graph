@@ -4,7 +4,16 @@ export const resolvers: gqlTypes.Resolvers = {
   User: {
     async google(user) {
       return {
-        searchHistory: ["recipe pancakes", "capital of Indonesia", user.id],
+        searchHistory: [
+          {
+            url: "asd",
+            type: gqlTypes.SearchHistoryRecordType.Search,
+            title: "qwe",
+          },
+        ],
+        locationHistory: [
+          { accuracy: "Coming soon", latitude: 1, longitude: 1 },
+        ],
       };
     },
   },

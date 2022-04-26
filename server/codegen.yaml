@@ -4,6 +4,8 @@ generates:
     config:
       avoidOptionals: false
       maybeValue: T | undefined
+      scalars:
+        ComingSoon: string
       mappers:
         User: shared/graphql/parents#UserParent
     plugins:

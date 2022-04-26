@@ -1,5 +1,25 @@
+scalar ComingSoon
+
 type Google {
-  searchHistory: [String]
+  searchHistory: [SearchHistoryRecord!]!
+  locationHistory: [LocationHistoryRecord!]!
+}
+
+enum SearchHistoryRecordType {
+  SEARCH
+  VISIT
+}
+
+type SearchHistoryRecord {
+  type: SearchHistoryRecordType!
+  url: String!
+  title: String!
+}
+
+type LocationHistoryRecord {
+  latitude: Int!
+  longitude: Int!
+  accuracy: ComingSoon! @deprecated(reason: "Coming Soon")
 }
 
 extend type User @key(fields: "id") {
