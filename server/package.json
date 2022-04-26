@@ -18,6 +18,8 @@
   "dependencies": {
     "@apollo/federation": "^0.36.1",
     "@apollo/gateway": "^2.0.1",
+    "@graphql-tools/graphql-file-loader": "^7.3.11",
+    "@graphql-tools/load": "^7.5.10",
     "apollo-server": "^3.6.7",
     "dotenv": "^16.0.0",
     "graphql": "^16.3.0"

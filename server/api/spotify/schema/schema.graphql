@@ -1,0 +1,14 @@
+type Song {
+  id: ID!
+  title: String!
+  author: String!
+}
+
+type Spotify {
+  likedSongs: [Song]
+}
+
+extend type User @key(fields: "id") {
+  id: ID!
+  spotify: Spotify!
+}

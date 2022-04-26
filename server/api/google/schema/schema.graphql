@@ -1,0 +1,8 @@
+type Google {
+  searchHistory: [String]
+}
+
+extend type User @key(fields: "id") {
+  id: ID!
+  google: Google!
+}

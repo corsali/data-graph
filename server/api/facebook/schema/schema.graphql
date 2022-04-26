@@ -1,0 +1,14 @@
+type Page {
+  id: ID!
+  title: String!
+  description: String
+}
+
+type Facebook {
+  likedPages: [Page]
+}
+
+extend type User @key(fields: "id") {
+  id: ID!
+  facebook: Facebook!
+}

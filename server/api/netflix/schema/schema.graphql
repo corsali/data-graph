@@ -1,0 +1,14 @@
+type Movie {
+  id: ID!
+  title: String!
+  description: String
+}
+
+type Netflix {
+  toWatch: [Movie]
+}
+
+extend type User @key(fields: "id") {
+  id: ID!
+  netflix: Netflix!
+}

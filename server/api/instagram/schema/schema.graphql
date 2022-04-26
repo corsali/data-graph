@@ -1,0 +1,14 @@
+type InstagramAccount {
+  id: ID!
+  title: String!
+  description: String
+}
+
+type Instagram {
+  following: [InstagramAccount]
+}
+
+extend type User @key(fields: "id") {
+  id: ID!
+  instagram: Instagram!
+}
