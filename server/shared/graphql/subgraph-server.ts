@@ -1,7 +1,7 @@
 import { ApolloServer } from "apollo-server";
 import { buildSubgraphSchema } from "@apollo/subgraph";
 import { ApolloServerPluginInlineTraceDisabled } from "apollo-server-core";
-import { localPortsConfig, Service } from "@shared/env";
+import { localPortsConfig, Service } from "../../shared/env";
 
 export type SubgraphServerConfig = {
   name: Service;
