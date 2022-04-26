@@ -1,8 +1,8 @@
-export const resolvers = {
-  User: {
-    async google(user: any) {
-      console.log(user);
+import * as gqlTypes from "../../../shared/graphql";
 
+export const resolvers: gqlTypes.Resolvers = {
+  User: {
+    async google(user) {
       return {
         searchHistory: ["recipe pancakes", "capital of Indonesia", user.id],
       };

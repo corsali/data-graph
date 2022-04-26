@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "vercel:install": "npm-install-if-needed",
+    "gen:gql": "graphql-codegen generate",
     "build": "webpack",
     "start": "concurrently -k npm:start:*",
     "start:gateway": "nodemon --ext ts --watch shared --watch api/gateway --exec 'npm run node -- api/gateway/index.ts'",
@@ -13,11 +14,17 @@
     "start:instagram": "nodemon --ext ts --watch shared --watch api/instagram --exec 'npm run node -- api/instagram/index.ts'",
     "start:netflix": "nodemon --ext ts --watch shared --watch api/netflix --exec 'npm run node -- api/netflix/index.ts'",
     "start:spotify": "nodemon --ext ts --watch shared --watch api/spotify --exec 'npm run node -- api/spotify/index.ts'",
-    "node": "TS_NODE_TRANSPILE_ONLY=true NODE_OPTIONS=${npm_package_config_node_options} node"
+    "node": "TS_NODE_TRANSPILE_ONLY=true NODE_OPTIONS=${npm_package_config_node_options} node",
+    "postinstall": "npm run gen:gql"
   },
   "dependencies": {
     "@apollo/federation": "^0.36.1",
     "@apollo/gateway": "^2.0.1",
+    "@graphql-codegen/add": "3.1.1",
+    "@graphql-codegen/cli": "2.6.2",
+    "@graphql-codegen/near-operation-file-preset": "^2.2.9",
+    "@graphql-codegen/typescript": "2.4.8",
+    "@graphql-codegen/typescript-resolvers": "2.6.1",
     "@graphql-tools/graphql-file-loader": "^7.3.11",
     "@graphql-tools/load": "^7.5.10",
     "apollo-server": "^3.6.7",

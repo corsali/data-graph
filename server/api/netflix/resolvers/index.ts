@@ -1,6 +1,8 @@
-export const resolvers = {
+import * as gqlTypes from "../../../shared/graphql";
+
+export const resolvers: gqlTypes.Resolvers = {
   User: {
-    async netflix(user: any) {
+    async netflix(user) {
       return { toWatch: [{ id: "1", title: user.id }] };
     },
   },

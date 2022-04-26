@@ -26,6 +26,9 @@ To get the values for environmental variables `REACT_APP_FORM_URL` and `REACT_AP
     REACT_APP_FORM_QUERY_FIELD_ID = 214069913
     ```
 
+### Issues and todos
+We've got MaterialUI and Tailwind set up. Might be worth to improve the consistency of usage across the app.
+
 ## Server
 
 ### Local development
@@ -33,3 +36,6 @@ To get the values for environmental variables `REACT_APP_FORM_URL` and `REACT_AP
 ```
 npm install && npm start
 ```
+
+### Issues
+Webpack aliases are not working with Vercel serverless with the present config. 

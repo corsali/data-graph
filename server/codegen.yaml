@@ -1,0 +1,13 @@
+schema: "api/**/*.graphql"
+generates:
+  shared/graphql/types.ts:
+    config:
+      avoidOptionals: false
+      maybeValue: T | undefined
+      mappers:
+        User: shared/graphql/parents#UserParent
+    plugins:
+      - add:
+          content: "/* eslint-disable */"
+      - typescript
+      - typescript-resolvers

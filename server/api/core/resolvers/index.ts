@@ -1,11 +1,8 @@
-export const resolvers = {
-  User: {
-    async __resolveReference(ref: any) {
-      return { id: ref.id, name: "asd" };
-    },
-  },
+import * as gqlTypes from "../../../shared/graphql";
+
+export const resolvers: gqlTypes.Resolvers = {
   Query: {
-    async user(_: any, { id }: any) {
+    async user(_, { id }) {
       return { id: id, name: "asd" };
     },
     async users() {
