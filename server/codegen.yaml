@@ -3,9 +3,10 @@ generates:
   shared/graphql/types.ts:
     config:
       avoidOptionals: false
-      maybeValue: T | undefined
+      maybeValue: 'T extends PromiseLike<infer U> ? Promise<U | null> : T | null'
       scalars:
         ComingSoon: string
+        Date: Date
       mappers:
         User: shared/graphql/parents#UserParent
     plugins:

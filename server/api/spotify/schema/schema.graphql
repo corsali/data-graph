@@ -1,3 +1,5 @@
+scalar ComingSoon
+
 type Song {
   id: ID!
   title: String!
@@ -10,5 +12,5 @@ type Spotify {
 
 extend type User @key(fields: "id") {
   id: ID!
-  spotify: Spotify!
-}
+  spotify: ComingSoon! @deprecated(reason: "Coming Soon")
+  }

@@ -37,5 +37,7 @@ We've got MaterialUI and Tailwind set up. Might be worth to improve the consiste
 npm install && npm start
 ```
 
+For mock data to be available run `npm run gen:data:clean` and restart the server 
+
 ### Issues
 Webpack aliases are not working with Vercel serverless with the present config. 

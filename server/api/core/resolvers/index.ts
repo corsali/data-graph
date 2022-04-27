@@ -1,12 +1,13 @@
 import * as gqlTypes from "../../../shared/graphql";
+import { usersDb } from "../../../shared";
 
 export const resolvers: gqlTypes.Resolvers = {
   Query: {
     async user(_, { id }) {
-      return { id: id, name: "asd" };
+      return usersDb.maybeOne({ id });
     },
-    async users() {
-      return [{ id: "" + Math.random(), name: "asd" }];
+    async users() {      
+      return usersDb.getAll();
     },
   },
 };

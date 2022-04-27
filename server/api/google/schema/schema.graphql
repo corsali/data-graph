@@ -1,8 +1,10 @@
 scalar ComingSoon
+scalar Date
 
 type Google {
   searchHistory: [SearchHistoryRecord!]!
   locationHistory: [LocationHistoryRecord!]!
+  calendar: ComingSoon! @deprecated(reason: "Coming Soon")
 }
 
 enum SearchHistoryRecordType {
@@ -14,15 +16,16 @@ type SearchHistoryRecord {
   type: SearchHistoryRecordType!
   url: String!
   title: String!
+  timestamp: Date!
 }
 
 type LocationHistoryRecord {
   latitude: Int!
   longitude: Int!
-  accuracy: ComingSoon! @deprecated(reason: "Coming Soon")
+  timestamp: Date!
 }
 
 extend type User @key(fields: "id") {
   id: ID!
-  google: Google!
+  google: Google
 }

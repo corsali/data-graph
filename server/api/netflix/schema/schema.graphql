@@ -1,14 +1,15 @@
-type Movie {
-  id: ID!
+scalar Date 
+type NetflixMovie {
   title: String!
-  description: String
+  cover: String!
+  watchedOn: Date
 }
 
 type Netflix {
-  toWatch: [Movie]
+  history: [NetflixMovie]
 }
 
 extend type User @key(fields: "id") {
   id: ID!
-  netflix: Netflix!
+  netflix: Netflix
 }

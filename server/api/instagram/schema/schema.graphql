@@ -1,7 +1,9 @@
+scalar Date
+
 type InstagramAccount {
-  id: ID!
-  title: String!
-  description: String
+  name: String!
+  url: String!
+  followingSince: Date!
 }
 
 type Instagram {
@@ -10,5 +12,5 @@ type Instagram {
 
 extend type User @key(fields: "id") {
   id: ID!
-  instagram: Instagram!
+  instagram: Instagram
 }

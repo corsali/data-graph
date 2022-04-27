@@ -1,14 +1,55 @@
-type Page {
-  id: ID!
-  title: String!
+scalar Date
+
+interface FacebookEntity {
+  name: String!
+}
+
+type FacebookPage implements FacebookEntity {
+  name: String!
+  likedOn: Date!
+}
+
+type FacebookFriend implements FacebookEntity {
+  name: String!
+  addedOn: Date!
+}
+
+type FacebookPhotoMetadata {
+  cameraMake: String
+  cameraModel: String
+  takenAt: Date
+}
+
+type FacebookRecordingMetadata {
+  recordedAt: Date
+}
+
+union FacebookAttachmentMetadata =
+    FacebookPhotoMetadata
+  | FacebookRecordingMetadata
+
+type FacebookAttachment {
+  title: String
   description: String
+  createdOn: Date!
+  source: String!
+  metadata: FacebookAttachmentMetadata
+}
+
+type FacebookPost {
+  title: String
+  post: String
+  attachments: [FacebookAttachment!]
+  postedOn: Date!
 }
 
 type Facebook {
-  likedPages: [Page]
+  likedPages: [FacebookPage]!
+  friends: [FacebookFriend]!
+  posts: [FacebookPost]
 }
 
 extend type User @key(fields: "id") {
   id: ID!
-  facebook: Facebook!
+  facebook: Facebook
 }

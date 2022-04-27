@@ -5,6 +5,8 @@
   "scripts": {
     "vercel:install": "npm-install-if-needed",
     "gen:gql": "graphql-codegen generate",
+    "gen:data": "ts-node ./shared/data/generator.ts",
+    "gen:data:clean": "rimraf ./shared/data/generated/* && ts-node ./shared/data/generator.ts",
     "build": "webpack",
     "start": "concurrently -k npm:start:*",
     "start:gateway": "nodemon --ext ts --watch shared --watch api/gateway --exec 'npm run node -- api/gateway/index.ts'",
@@ -29,12 +31,18 @@
     "@graphql-tools/load": "^7.5.10",
     "apollo-server": "^3.6.7",
     "dotenv": "^16.0.0",
-    "graphql": "^16.3.0"
+    "graphql": "^16.3.0",
+    "ramda": "^0.28.0",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
+    "@faker-js/faker": "^6.2.0",
+    "@types/ramda": "^0.28.11",
+    "@types/uuid": "^8.3.4",
     "concurrently": "^7.1.0",
     "nodemon": "^2.0.7",
     "npm-install-if-needed": "^1.0.17",
+    "rimraf": "^3.0.2",
     "ts-loader": "^9.2.8",
     "ts-node": "^10.7.0",
     "tsconfig-paths": "3.14.1",

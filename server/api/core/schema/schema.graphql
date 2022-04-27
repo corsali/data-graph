@@ -2,7 +2,8 @@ scalar ComingSoon
 
 type User @key(fields: "id") {
   id: ID!
-  name: String
+  firstName: String
+  lastName: String
 }
 
 extend type Query {
