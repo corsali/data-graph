@@ -1,14 +1,14 @@
-import { readdirSync, statSync, promises as fs } from "fs";
-import { join } from "path";
-import rimraf from "rimraf";
+const { readdirSync, statSync, promises: fs } = require("fs");
+const { join } = require("path");
+const rimraf = require("rimraf");
 
-const getDirectories = (srcpath: string) => {
+const getDirectories = (srcpath) => {
   return readdirSync(srcpath).flatMap((file) =>
     statSync(join(srcpath, file)).isDirectory() ? [file] : []
   );
 };
 
-const toPascalCase = (otherCased: string) => {
+const toPascalCase = (otherCased) => {
   return otherCased
     .toLowerCase()
     .replace(new RegExp(/[-_]+/, "g"), " ")
@@ -21,21 +21,22 @@ const toPascalCase = (otherCased: string) => {
 };
 
 /**
- * Works for data stored in the '../data' folder with each service being in its own subfolder
+ * Works for data stored in the 'data' folder with each service being in its own subfolder
  * @returns
  */
+const dataFolder = "../data";
 const getDirectoriesByService = () => {
-  return getDirectories("../data").reduce(
+  return getDirectories(dataFolder).reduce(
     (acc, service) => ({
       ...acc,
-      [service]: getDirectories(`../data/${service}`).map(toPascalCase),
+      [service]: getDirectories(`${dataFolder}/${service}`).map(toPascalCase),
     }),
     {}
   );
 };
 
-const saveData = <T>(data: T) => {
-  const filepath = `./shared/data/categories.ts`;
+const saveData = (data) => {
+  const filepath = `./src/shared/categories/categories.ts`;
 
   const content = `/* eslint-disable */
     
@@ -51,3 +52,4 @@ export const categories = ${JSON.stringify(data, null, 2)} as const;
 };
 
 saveData(getDirectoriesByService());
+

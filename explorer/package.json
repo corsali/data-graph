@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "gen:cats": "node scripts/gen-categories.js"
   },
   "dependencies": {
     "@emotion/react": "^11.9.0",
@@ -19,7 +20,8 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.0",
-    "redux": "^4.0.5"
+    "redux": "^4.0.5",
+    "rimraf": "^3.0.2"
   },
   "resolutions": {
     "graphql": "^15.8.0",
@@ -37,6 +39,7 @@
     "@types/react": "^18.0.5",
     "@types/react-dom": "^18.0.1",
     "@types/react-redux": "^7.1.24",
+    "@types/rimraf": "^3.0.2",
     "autoprefixer": "^10.4.4",
     "babel-jest": "^27.4.2",
     "babel-loader": "^8.2.3",

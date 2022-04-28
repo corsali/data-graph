@@ -4,12 +4,16 @@ import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { CssBaseline, ThemeProvider } from "@mui/material";
-import { theme } from '@shared/theme';
+import { theme } from "@shared/theme";
+import { Provider } from "react-redux";
+import { store } from "graphql-playground-react";
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
     <CssBaseline />
-    <App />
+    <Provider store={store as any}>
+      <App />
+    </Provider>
   </ThemeProvider>,
   document.getElementById("root") as HTMLElement
 );

@@ -1,16 +1,27 @@
 import React from "react";
 import "./App.scss";
-import { Provider } from "react-redux";
-import { pipe } from "ramda";
-import { Playground, store } from "graphql-playground-react";
+import { Provider, useSelector } from "react-redux";
+import { pipe, tap } from "ramda";
+import {
+  Playground,
+  store,
+  getQuery,
+  getResponses,
+} from "graphql-playground-react";
 import { PlaygroundWrapperProps } from "graphql-playground-react/lib/components/PlaygroundWrapper";
-import { VNButton, DeepPartial } from "./shared";
-import { RequestDataModal } from "@shared/components/RequestDataModal";
+import { DeepPartial } from "@shared/types";
+import { RequestDataModal, VNButton } from "@shared/components";
+import {
+  getQueriedServices,
+  editorPrettierSettings,
+} from "@shared/query-editor";
 
 const baseUrl = process.env.REACT_APP_API_URL;
 const endpoint = `${baseUrl}/api/gateway`;
 
 const App = () => {
+  useQueriedServices();
+
   return (
     <div className="flex flex-col items-stretch mx-4 h-full">
       <div className="flex width-full align-center justify-between text-slate-800 h-16">
@@ -19,7 +30,7 @@ const App = () => {
         </div>
         <RequestDataModal>
           {({ openModal }) => (
-            <VNButton onClick={pipe(getQuery, openModal)}>
+            <VNButton onClick={pipe(getQuery, tap(console.log), openModal)}>
               Request Production Data
             </VNButton>
           )}
@@ -35,6 +46,9 @@ const App = () => {
             "tracing.tracingSupported": false,
             "tracing.hideTracingResponse": true,
             "schema.polling.interval": 30000,
+            "prettier.printWidth": editorPrettierSettings.printWidth,
+            "prettier.tabWidth": editorPrettierSettings.tabWidth,
+            "prettier.useTabs": editorPrettierSettings.useTabs,
           }}
           fixedEndpoint
         />
@@ -49,8 +63,18 @@ const GQLEditor: React.FC<DeepPartial<PlaygroundWrapperProps>> = (props) => (
 
 export default App;
 
-const getQuery = () =>
-  // ugly, but Playground doesn't provide any sensible way of getting this data
-  [...document.getElementsByClassName("CodeMirror-code")[0].children]
-    .map((c, i) => (c.textContent || "").replace(i + 1 + "", ""))
-    .join("\n");
+export const useQueriedServices = () => {
+  const [services, setServices] = React.useState<string[]>([]);
+  const query = useSelector(getQuery);
+  const schema = useSelector(getResponses);
+  console.log({ query, split: query.split("\n") });
+
+  React.useEffect(() => {
+    const extractedServices = getQueriedServices(query);
+    if (extractedServices) {
+      setServices(extractedServices);
+    }
+  }, [query]);
+
+  console.log({ services, schema });
+};

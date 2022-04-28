@@ -1,8 +1,8 @@
 /* eslint-disable */
-
-export type Categories = typeof categories;
+    
+export type Categories = typeof categories
 export const categories = {
-  facebook: [
+  "facebook": [
     "ActivityMessages",
     "AdsInformation",
     "AppsAndWebsitesOffOfFacebook",
@@ -49,36 +49,50 @@ export const categories = {
     "YourInteractionsOnFacebook",
     "YourPlaces",
     "YourProblemReports",
-    "YourTopics",
+    "YourTopics"
   ],
-  google: [
+  "google": [
+    "Ads",
+    "Android",
     "AndroidDeviceConfigurationService",
+    "Assistant",
     "Calendar",
     "Chrome",
     "Contacts",
+    "Discover",
+    "Gmail",
     "GoogleAccount",
+    "GoogleAnalytics",
+    "GoogleApps",
     "GoogleBusinessProfile",
     "GoogleChat",
+    "GoogleLens",
     "GooglePay",
     "GooglePhotos",
+    "GooglePlayGames",
     "GooglePlayGamesServices",
     "GooglePlayMoviesTv",
     "GooglePlayStore",
     "GoogleShopping",
     "GoogleWorkspaceMarketplace",
+    "Help",
     "HomeApp",
+    "ImageSearch",
     "LocationHistory",
     "Maps",
     "MapsYourPlaces",
-    "MyActivity",
     "News",
     "Profile",
+    "Search",
     "SearchContributions",
+    "Shopping",
+    "Takeout",
     "Tasks",
     "Voice",
-    "YoutubeAndYoutubeMusic",
+    "Youtube",
+    "YoutubeAndYoutubeMusic"
   ],
-  instagram: [
+  "instagram": [
     "AccountInformation",
     "AdsAndBusinesses",
     "AdsAndTopics",
@@ -108,10 +122,10 @@ export const categories = {
     "Saved",
     "Shopping",
     "StoryStickerInteractions",
-    "YourTopics",
+    "YourTopics"
   ],
-  linkedIn: [],
-  netflix: [
+  "linkedIn": [],
+  "netflix": [
     "Account",
     "Clickstream",
     "ContentInteraction",
@@ -123,7 +137,10 @@ export const categories = {
     "PaymentAndBilling",
     "Profiles",
     "SocialMediaConnections",
-    "Surveys",
+    "Surveys"
   ],
-  twitter: ["Assets", "Data"],
+  "twitter": [
+    "Assets",
+    "Data"
+  ]
 } as const;

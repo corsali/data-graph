@@ -5,7 +5,6 @@
   "scripts": {
     "vercel:install": "npm-install-if-needed",
     "gen:gql": "graphql-codegen generate",
-    "gen:cats": "ts-node ./shared/data/gen-categories.ts",
     "gen:data": "ts-node ./shared/data/gen-mocks.ts",
     "gen:data:clean": "rimraf ./shared/data/generated/* && npm run gen:data",
     "build": "webpack",
