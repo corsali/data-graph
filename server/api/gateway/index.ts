@@ -15,6 +15,17 @@ const server = new ApolloServer({
     ApolloServerPluginInlineTraceDisabled,
   ],
   introspection: true,
+  formatResponse: (res) =>
+    res.data
+      ? {
+          ...res,
+          data: {
+            WARNING:
+              "Please note that the data displayed is generated automatically and does not come from real users",
+            ...res.data,
+          },
+        }
+      : res,
 });
 
 server.listen({ port: localGatewayPort }).then(({ url }: any) => {

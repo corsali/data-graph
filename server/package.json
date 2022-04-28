@@ -5,8 +5,9 @@
   "scripts": {
     "vercel:install": "npm-install-if-needed",
     "gen:gql": "graphql-codegen generate",
-    "gen:data": "ts-node ./shared/data/generator.ts",
-    "gen:data:clean": "rimraf ./shared/data/generated/* && ts-node ./shared/data/generator.ts",
+    "gen:cats": "ts-node ./shared/data/gen-categories.ts",
+    "gen:data": "ts-node ./shared/data/gen-mocks.ts",
+    "gen:data:clean": "rimraf ./shared/data/generated/* && npm run gen:data",
     "build": "webpack",
     "start": "concurrently -k npm:start:*",
     "start:gateway": "node -e \"setTimeout(() => process.exit(0), 1000)\" && nodemon --ext ts --watch shared --watch api/gateway --exec 'npm run node -- api/gateway/index.ts'",
@@ -38,6 +39,7 @@
   "devDependencies": {
     "@faker-js/faker": "^6.2.0",
     "@types/ramda": "^0.28.11",
+    "@types/rimraf": "^3.0.2",
     "@types/uuid": "^8.3.4",
     "concurrently": "^7.1.0",
     "nodemon": "^2.0.7",

@@ -1,10 +1,10 @@
 import { DbFacebook, DbUser, DbGoogle, DbInstagram, DbNetflix } from "./types";
 import { createMock } from "../utils";
-import { facebook } from "./generated/facebook";
-import { google } from "./generated/google";
-import { instagram } from "./generated/instagram";
-import { netflix } from "./generated/netflix";
-import { users } from "./generated/users";
+import { facebook } from "./mocks/facebook";
+import { google } from "./mocks/google";
+import { instagram } from "./mocks/instagram";
+import { netflix } from "./mocks/netflix";
+import { users } from "./mocks/users";
 
 export const usersDb = createMock<DbUser>("users", users);
 export const facebookDb = createMock<DbFacebook>("facebook", facebook);

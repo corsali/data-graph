@@ -10,7 +10,7 @@ import {
 
 const saveData = <T>(type: string, data: T) => {
   const fileName = type.toLowerCase();
-  const filepath = `./shared/data/generated/${fileName}.ts`;
+  const filepath = `./shared/data/mocks/${fileName}.ts`;
 
   fs.readFile(filepath).catch(() => {
     const content = `/* eslint-disable */
