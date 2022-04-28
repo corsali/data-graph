@@ -1,22 +1,5 @@
-import { Facebook } from "../graphql";
-import { createMock } from "../utils";
-import { DbUser } from "./users";
-import { readFileSync } from "fs";
-import { join } from "path";
 import faker from "@faker-js/faker";
-
-export type DbFacebook = Facebook & Omit<DbUser, "id"> & { userId: string };
-
-export const createFacebookDb = () => {
-  let content = "[]";
-  try {
-    content = readFileSync(join(__dirname, "generated/facebook.json"), "utf8");
-  } catch (error) {}
-
-  const facebook = JSON.parse(content);
-
-  return createMock<DbFacebook>("facebook", facebook);
-};
+import { DbFacebook, DbUser } from "../types";
 
 export const generateFacebook = (users: DbUser[]): DbFacebook[] =>
   users.map(({ id, firstName, lastName }) => {
@@ -62,8 +45,8 @@ export const generateFacebook = (users: DbUser[]): DbFacebook[] =>
             },
             {
               createdOn: faker.date.recent(),
-              title: 'recording-0001',
-              source: 'Source unavailable',
+              title: "recording-0001",
+              source: "Source unavailable",
               metadata: { recordedAt: faker.date.recent() },
             },
           ],

@@ -9,7 +9,7 @@
     "gen:data:clean": "rimraf ./shared/data/generated/* && ts-node ./shared/data/generator.ts",
     "build": "webpack",
     "start": "concurrently -k npm:start:*",
-    "start:gateway": "nodemon --ext ts --watch shared --watch api/gateway --exec 'npm run node -- api/gateway/index.ts'",
+    "start:gateway": "node -e \"setTimeout(() => process.exit(0), 1000)\" && nodemon --ext ts --watch shared --watch api/gateway --exec 'npm run node -- api/gateway/index.ts'",
     "start:core": "nodemon --ext ts --watch shared --watch api/core --exec 'npm run node -- api/core/index.ts'",
     "start:facebook": "nodemon --ext ts --watch shared --watch api/facebook --exec 'npm run node -- api/facebook/index.ts'",
     "start:google": "nodemon --ext ts --watch shared --watch api/google --exec 'npm run node -- api/google/index.ts'",

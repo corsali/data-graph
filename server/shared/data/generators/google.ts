@@ -1,11 +1,6 @@
-import { Google, SearchHistoryRecordType } from "../graphql";
-import { createMock } from "../utils";
-import { DbUser } from "./users";
-import { readFileSync } from "fs";
-import { join } from "path";
+import { SearchHistoryRecordType } from "../../graphql";
 import faker from "@faker-js/faker";
-
-export type DbGoogle = Google & Omit<DbUser, "id"> & { userId: string };
+import { DbGoogle, DbUser } from "../types";
 
 export const generateGoogle = (users: DbUser[]): DbGoogle[] =>
   users.map(({ id, firstName, lastName }) => {
@@ -37,14 +32,3 @@ export const generateGoogle = (users: DbUser[]): DbGoogle[] =>
       calendar: "Coming soon",
     };
   });
-
-export const createGoogleDb = () => {
-  let content = "[]";
-  try {
-    content = readFileSync(join(__dirname, "generated/google.json"), "utf8");
-  } catch (error) {}
-
-  const google = JSON.parse(content);
-
-  return createMock<DbGoogle>("google", google);
-};

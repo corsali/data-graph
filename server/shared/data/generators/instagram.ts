@@ -1,11 +1,5 @@
-import { Instagram } from "../graphql";
-import { createMock } from "../utils";
-import { DbUser } from "./users";
-import { readFileSync } from "fs";
-import { join } from "path";
 import faker from "@faker-js/faker";
-
-export type DbInstagram = Instagram & Omit<DbUser, "id"> & { userId: string };
+import { DbInstagram, DbUser } from "../types";
 
 export const generateInstagram = (users: DbUser[]): DbInstagram[] =>
   users.map(({ id, firstName, lastName }) => {
@@ -27,14 +21,3 @@ export const generateInstagram = (users: DbUser[]): DbInstagram[] =>
       ],
     };
   });
-
-export const createInstagramDb = () => {
-  let content = "[]";
-  try {
-    content = readFileSync(join(__dirname, "generated/instagram.json"), "utf8");
-  } catch (error) {}
-
-  const instagram = JSON.parse(content);
-
-  return createMock<DbInstagram>("instagram", instagram);
-};
