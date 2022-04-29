@@ -26,7 +26,7 @@ const App = () => {
                   color="inherit"
                   onClick={openModal}
                 >
-                  {categoriesAmount} categories pending
+                  Data coming soon ({categoriesAmount})
                 </Button>
               ) : (
                 <></>

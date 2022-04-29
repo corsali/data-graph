@@ -12,7 +12,6 @@ export const useAvailableCategories = () => {
     fetch(availableCategoriesEndpoint)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setAvailableCategories(data);
       });
   }, []);

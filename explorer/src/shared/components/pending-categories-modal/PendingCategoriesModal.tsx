@@ -44,7 +44,7 @@ export const PendingCategoriesModalContent: React.FC<PendingCategoriesModalConte
         pb={2}
         borderBottom="1px solid"
       >
-        Available categories
+        Available Data Categories
       </Typography>
       <Box p={6} pt={2}>
         {Object.entries(categories).map(([service, cats]) => {
@@ -70,6 +70,7 @@ export const PendingCategoriesModalContent: React.FC<PendingCategoriesModalConte
                       textTransform="capitalize"
                       color={isAvailable ? "secondary.light" : "grey.300"}
                       variant="body2"
+                      component={Box}
                     >
                       <Typography
                         component={Box}
