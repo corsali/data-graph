@@ -11,5 +11,5 @@ app.get("/available-categories", (req: Request, res: Response) => {
 });
 
 app.listen(localRestApiPort, () => {
-  console.log(`Application started on port ${localRestApiPort}!`);
+  console.log(`Application started on port ${localRestApiPort}`);
 });
