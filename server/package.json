@@ -31,7 +31,6 @@
     "@graphql-tools/graphql-file-loader": "^7.3.11",
     "@graphql-tools/load": "^7.5.10",
     "apollo-server": "^3.6.7",
-    "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "graphql": "^16.3.0",
     "ramda": "^0.28.0",
@@ -39,7 +38,6 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^6.2.0",
-    "@types/cors": "^2.8.12",
     "@types/ramda": "^0.28.11",
     "@types/rimraf": "^3.0.2",
     "@types/uuid": "^8.3.4",
