@@ -1,6 +1,8 @@
 /* eslint-disable */
     
-export type Categories = typeof categories
+export type Categories = typeof categories;
+export type Service = keyof Categories;
+
 export const categories = {
   "facebook": [
     "ActivityMessages",

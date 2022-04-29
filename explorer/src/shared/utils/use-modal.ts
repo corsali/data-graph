@@ -17,7 +17,7 @@ export const useModal = (initialState = false) => {
 
 export type PropsWithModalOpener<
   T extends Record<string, unknown> = Record<string, unknown>,
-  S extends unknown = void
+  ModalOpenerProps extends Record<string, unknown> = {}
 > = T & {
-  children: React.ComponentType<{ openModal: (props: S) => void }>;
+  children: React.ComponentType<ModalOpenerProps & { openModal: () => void }>;
 };

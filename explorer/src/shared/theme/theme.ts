@@ -1,4 +1,5 @@
-import { createTheme, ThemeOptions } from "@mui/material";
+import { createTheme, darken, lighten, ThemeOptions } from "@mui/material";
+import createPalette from "@mui/material/styles/createPalette";
 
 declare module "@mui/material/styles" {
   interface Theme {
@@ -13,17 +14,26 @@ declare module "@mui/material/styles" {
   }
 }
 
+const colorsBase = {
+  aquaDeep: "#0c564c",
+  neonCarrot: "#F99e48",
+  bostonBlue: "#2d84a5",
+  soltitude: "#Dfe9f3",
+};
+
 const variables: ThemeOptions["variables"] = { navDrawerWidth: 200 };
 
 export const theme = createTheme({
-  components: {
-    MuiAppBar: { styleOverrides: { root: { border: 0, zIndex: 900 } } },
-    MuiDrawer: {
-      styleOverrides: {
-        paper: { width: variables.navDrawerWidth, zIndex: 900, border: 0 },
-      },
+  palette: createPalette({
+    primary: {
+      main: colorsBase.neonCarrot,
+      dark: darken(colorsBase.neonCarrot, 0.1),
     },
-  },
+    secondary: {
+      main: colorsBase.bostonBlue,
+      light: lighten(colorsBase.bostonBlue, 0.2),
+    },
+  }),
   variables,
   spacing: 4,
 });

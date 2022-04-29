@@ -2,17 +2,20 @@ import { CircularProgress, Box, Dialog } from "@mui/material";
 import { PropsWithModalOpener, useModal } from "@shared/utils";
 import React from "react";
 import { pipe } from "ramda";
+import { useSelector } from "react-redux";
+import { getQuery } from "graphql-playground-react";
 
-export type RequestDataModalProps = PropsWithModalOpener<{}, string>;
+export type RequestDataModalProps = PropsWithModalOpener<{}>;
 
 export const RequestDataModal: React.FC<RequestDataModalProps> = ({
   children: Children,
 }) => {
+  const query = useSelector(getQuery);
   const [formUrl, setFormUrl] = React.useState("");
   const [isLoading, setIsLoading] = React.useState(true);
   const { isModalOpen, closeModal, openModal } = useModal();
 
-  const handleOpen = pipe(prepFullFormUrl, setFormUrl, openModal);
+  const handleOpen = () => pipe(prepFullFormUrl, setFormUrl, openModal)(query);
 
   return (
     <>

@@ -40,7 +40,9 @@ const saveData = (data) => {
 
   const content = `/* eslint-disable */
     
-export type Categories = typeof categories
+export type Categories = typeof categories;
+export type Service = keyof Categories;
+
 export const categories = ${JSON.stringify(data, null, 2)} as const;
 `;
 

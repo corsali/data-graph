@@ -20,7 +20,7 @@ const server = new ApolloServer({
       ? {
           ...res,
           data: {
-            WARNING:
+            NOTICE:
               "Please note that the data displayed is generated automatically and does not come from real users",
             ...res.data,
           },
