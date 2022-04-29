@@ -1,4 +1,15 @@
 {
   "cleanUrls": true,
-  "functions": { "**/*/index.ts": { "memory": 1024 } }
+  "functions": { "**/*/index.ts": { "memory": 1024 } },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "access-control-allow-origin",
+          "value": "*"
+        }
+      ]
+    }
+  ]
 }
