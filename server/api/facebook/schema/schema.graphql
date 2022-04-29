@@ -44,8 +44,8 @@ type FacebookPost {
 }
 
 type Facebook {
-  likedPages: [FacebookPage]!
-  friends: [FacebookFriend]!
+  pages: [FacebookPage]!
+  friendsAndFollowers: [FacebookFriend]!
   posts: [FacebookPost]
 }
 

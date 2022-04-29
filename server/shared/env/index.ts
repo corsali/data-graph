@@ -18,6 +18,7 @@ export const localPortsConfig: Record<Service, number> = {
 };
 
 export const localGatewayPort = 4100;
+export const localRestApiPort = 4101;
 
 const baseUrl = process.env.VERCEL_URL;
 

@@ -15,7 +15,7 @@ export const generateGoogle = (users: DbUser[]): DbGoogle[] =>
           timestamp: faker.date.recent(),
         },
       ],
-      searchHistory: [
+      search: [
         {
           timestamp: faker.date.recent(),
           title: "Gmail - Google",

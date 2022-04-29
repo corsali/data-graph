@@ -7,7 +7,7 @@ type InstagramAccount {
 }
 
 type Instagram {
-  following: [InstagramAccount]
+  followersAndFollowing: [InstagramAccount]
 }
 
 extend type User @key(fields: "id") {

@@ -7,9 +7,7 @@ import { DeepPartial } from "@shared/types";
 import { RequestDataModal, PendingCategoriesModal } from "@shared/components";
 import { editorPrettierSettings } from "@shared/query-editor";
 import { Box, Button } from "@mui/material";
-
-const baseUrl = process.env.REACT_APP_API_URL;
-const endpoint = `${baseUrl}/api/gateway`;
+import { gqlEndpoint } from "@shared/api";
 
 const App = () => {
   return (
@@ -28,7 +26,7 @@ const App = () => {
                   color="inherit"
                   onClick={openModal}
                 >
-                  {categoriesAmount} services pending
+                  {categoriesAmount} categories pending
                 </Button>
               ) : (
                 <></>
@@ -47,8 +45,7 @@ const App = () => {
 
       <Provider store={store as any}>
         <GQLEditor
-          endpoint={endpoint}
-          codeTheme={{}}
+          endpoint={gqlEndpoint}
           settings={{
             "editor.theme": "light",
             "tracing.tracingSupported": false,

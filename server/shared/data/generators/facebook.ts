@@ -7,10 +7,10 @@ export const generateFacebook = (users: DbUser[]): DbFacebook[] =>
       userId: id,
       firstName,
       lastName,
-      likedPages: [
+      pages: [
         { likedOn: faker.date.recent(), name: faker.company.companyName() },
       ],
-      friends: [
+      friendsAndFollowers: [
         {
           addedOn: faker.date.recent(),
           name: `${faker.name.firstName()} ${faker.name.lastName()}`,

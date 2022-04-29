@@ -7,7 +7,7 @@ export const generateInstagram = (users: DbUser[]): DbInstagram[] =>
       userId: id,
       firstName,
       lastName,
-      following: [
+      followersAndFollowing: [
         {
           name: "Instagram",
           url: "https://www.instagram.com/instagram",

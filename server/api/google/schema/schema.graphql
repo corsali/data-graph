@@ -2,7 +2,7 @@ scalar ComingSoon
 scalar Date
 
 type Google {
-  searchHistory: [SearchHistoryRecord!]!
+  search: [SearchHistoryRecord!]!
   locationHistory: [LocationHistoryRecord!]!
   calendar: ComingSoon! @deprecated(reason: "Coming Soon")
 }
