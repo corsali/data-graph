@@ -1,5 +1,15 @@
 {
   "cleanUrls": true,
   "functions": { "**/*/index.ts": { "memory": 1024 } },
-  "rewrites": [{ "source": "api/rest/.*", "destination": "api/rest" }]
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "access-control-allow-origin",
+          "value": "*"
+        }
+      ]
+    }
+  ]
 }

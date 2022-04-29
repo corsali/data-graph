@@ -5,7 +5,7 @@ import { localRestApiPort, availableCategories } from "../../shared";
 const app = express();
 app.use();
 
-app.get("/available-categories", (req: Request, res: Response) => {
+app.get("/", (req: Request, res: Response) => {
   res.send(availableCategories);
 });
 
