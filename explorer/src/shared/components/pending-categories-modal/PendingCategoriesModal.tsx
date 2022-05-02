@@ -78,7 +78,7 @@ export const PendingCategoriesModalContent: React.FC<PendingCategoriesModalConte
                         width={12}
                         textAlign="center"
                       >
-                        {isAvailable ? "✔" : "• "}
+                        {isAvailable ? "✔" : "•"}
                       </Typography>
                     </Typography>
                     <Typography textTransform="capitalize" variant="body2">
