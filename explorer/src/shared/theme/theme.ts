@@ -33,6 +33,8 @@ export const theme = createTheme({
       main: colorsBase.bostonBlue,
       light: lighten(colorsBase.bostonBlue, 0.2),
     },
+    background: { default: "#dbdee0" },
+    text: { primary: "#1e293b" },
   }),
   variables,
   spacing: 4,

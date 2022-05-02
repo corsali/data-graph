@@ -16,11 +16,22 @@ const App = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-stretch h-full overflow-hidden">
-      <div className="flex width-full align-center justify-between text-slate-800 h-16 mx-4">
-        <div>
-          <img className="max-h-full" alt="Vana Logo" src="logo.png"></img>
-        </div>
+    <Box
+      display="flex"
+      flexDirection="column"
+      alignItems="stretch"
+      height="100%"
+      overflow="hidden"
+      bgcolor="background.default"
+    >
+      <Box
+        display="flex"
+        justifyContent="space-between"
+        px={4}
+        height={64}
+        width="100%"
+      >
+        <img className="max-h-full" alt="Vana Logo" src="logo.png" />
         <Box display="flex" alignItems="center" color="primary.dark" gap={3}>
           <PendingCategoriesModal>
             {({ openModal, categoriesAmount }) =>
@@ -46,7 +57,7 @@ const App = () => {
             )}
           </RequestDataModal>
         </Box>
-      </div>
+      </Box>
 
       <Provider store={store as any}>
         <GQLEditor
@@ -63,7 +74,7 @@ const App = () => {
           fixedEndpoint
         />
       </Provider>
-    </div>
+    </Box>
   );
 };
 
