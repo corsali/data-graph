@@ -9,7 +9,7 @@
     "gen:data:clean": "rimraf ./shared/data/mocks/* && npm run gen:data",
     "build": "webpack",
     "start": "concurrently -k npm:start:*",
-    "start:categories": "nodemon --ext ts --watch shared --watch api/rest --exec 'npm run node -- api/categories/index.ts'",
+    "start:rest": "nodemon --ext ts --watch shared --watch api/rest --exec 'npm run node -- api/rest/index.ts'",
     "start:gateway": "node -e \"setTimeout(() => process.exit(0), 1000)\" && nodemon --ext ts --watch shared --watch api/gateway --exec 'npm run node -- api/gateway/index.ts'",
     "start:core": "nodemon --ext ts --watch shared --watch api/core --exec 'npm run node -- api/core/index.ts'",
     "start:facebook": "nodemon --ext ts --watch shared --watch api/facebook --exec 'npm run node -- api/facebook/index.ts'",
@@ -34,6 +34,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "graphql": "^16.3.0",
+    "helmet": "^5.0.2",
     "ramda": "^0.28.0",
     "uuid": "^8.3.2"
   },

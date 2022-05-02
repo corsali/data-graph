@@ -1,6 +1,10 @@
 {
   "cleanUrls": true,
   "functions": { "**/*/index.ts": { "memory": 1024 } },
+  "rewrites": [
+    { "source": "/api/rest/:anything", "destination": "/api/rest" },
+    { "source": "/rest/:anything", "destination": "/rest" }
+  ],
   "headers": [
     {
       "source": "/(.*)",
