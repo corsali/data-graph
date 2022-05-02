@@ -1,102 +1,103 @@
 /* eslint-disable */
+// @ts-nocheck
 import { DbGoogle } from '../types';
     
 export const google: DbGoogle[] = [
   {
-    "userId": "f8919ebb-1a2d-402c-be77-01bc534e80d4",
-    "firstName": "Taurean",
-    "lastName": "Torphy",
+    "userId": "3a3c54ff-5f82-4988-b42f-d4c66e435c57",
+    "firstName": "Ryder",
+    "lastName": "Bailey",
     "locationHistory": [
       {
-        "latitude": -245750057,
-        "longitude": -266261516,
-        "timestamp": new Date("2022-04-27T20:49:20.744Z")
+        "latitude": -458508073,
+        "longitude": -262408858,
+        "timestamp": new Date("2022-05-02T00:34:53.378Z")
       }
     ],
-    "searchHistory": [
+    "search": [
       {
-        "timestamp": new Date("2022-04-27T21:16:50.109Z"),
+        "timestamp": new Date("2022-05-01T16:47:22.569Z"),
         "title": "Gmail - Google",
         "type": "VISIT",
         "url": "https://www.google.com/gmail/"
       },
       {
-        "title": "traveler",
+        "title": "briefs",
         "type": "SEARCH",
-        "url": "https://www.google.com/search?q=traveler",
-        "timestamp": new Date("2022-04-27T16:05:45.853Z")
+        "url": "https://www.google.com/search?q=briefs",
+        "timestamp": new Date("2022-05-01T23:53:26.714Z")
       },
       {
-        "title": "stark",
+        "title": "apprehensive",
         "type": "SEARCH",
-        "url": "https://www.google.com/search?q=stark",
-        "timestamp": new Date("2022-04-27T20:34:37.996Z")
+        "url": "https://www.google.com/search?q=apprehensive",
+        "timestamp": new Date("2022-05-02T02:01:52.587Z")
       }
     ],
     "calendar": "Coming soon"
   },
   {
-    "userId": "c766b106-f092-497c-ab64-11ba67b39320",
-    "firstName": "Oswaldo",
-    "lastName": "Cruickshank",
+    "userId": "2b1155f8-baa8-40e8-af0c-ced7215fff13",
+    "firstName": "Adriel",
+    "lastName": "Klocko",
     "locationHistory": [
       {
-        "latitude": 289277804,
-        "longitude": 722455770,
-        "timestamp": new Date("2022-04-27T15:19:55.926Z")
+        "latitude": 765835229,
+        "longitude": 542419909,
+        "timestamp": new Date("2022-05-01T14:22:26.170Z")
       }
     ],
-    "searchHistory": [
+    "search": [
       {
-        "timestamp": new Date("2022-04-27T22:57:07.575Z"),
+        "timestamp": new Date("2022-05-01T21:55:48.086Z"),
         "title": "Gmail - Google",
         "type": "VISIT",
         "url": "https://www.google.com/gmail/"
       },
       {
-        "title": "crocodile",
+        "title": "infix",
         "type": "SEARCH",
-        "url": "https://www.google.com/search?q=crocodile",
-        "timestamp": new Date("2022-04-27T21:06:05.760Z")
+        "url": "https://www.google.com/search?q=infix",
+        "timestamp": new Date("2022-05-01T08:28:56.858Z")
       },
       {
-        "title": "blind",
+        "title": "cumbersome",
         "type": "SEARCH",
-        "url": "https://www.google.com/search?q=blind",
-        "timestamp": new Date("2022-04-27T09:03:02.113Z")
+        "url": "https://www.google.com/search?q=cumbersome",
+        "timestamp": new Date("2022-05-02T06:17:29.777Z")
       }
     ],
     "calendar": "Coming soon"
   },
   {
-    "userId": "2e166764-7ffe-43b0-9039-aa5cc4c87547",
-    "firstName": "Darrion",
-    "lastName": "Casper",
+    "userId": "6743c201-c050-44c7-943b-e6309c55fe6b",
+    "firstName": "Delilah",
+    "lastName": "Welch",
     "locationHistory": [
       {
-        "latitude": -639793747,
-        "longitude": -598093714,
-        "timestamp": new Date("2022-04-27T18:35:48.079Z")
+        "latitude": 101834127,
+        "longitude": -659560315,
+        "timestamp": new Date("2022-05-02T04:38:01.166Z")
       }
     ],
-    "searchHistory": [
+    "search": [
       {
-        "timestamp": new Date("2022-04-28T00:38:36.571Z"),
+        "timestamp": new Date("2022-05-01T14:01:01.323Z"),
         "title": "Gmail - Google",
         "type": "VISIT",
         "url": "https://www.google.com/gmail/"
       },
       {
-        "title": "gorilla",
+        "title": "number",
         "type": "SEARCH",
-        "url": "https://www.google.com/search?q=gorilla",
-        "timestamp": new Date("2022-04-28T05:50:59.398Z")
+        "url": "https://www.google.com/search?q=number",
+        "timestamp": new Date("2022-05-02T00:34:37.141Z")
       },
       {
-        "title": "insistent",
+        "title": "dead",
         "type": "SEARCH",
-        "url": "https://www.google.com/search?q=insistent",
-        "timestamp": new Date("2022-04-27T20:22:36.122Z")
+        "url": "https://www.google.com/search?q=dead",
+        "timestamp": new Date("2022-05-01T15:43:43.107Z")
       }
     ],
     "calendar": "Coming soon"

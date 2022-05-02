@@ -8,12 +8,13 @@ import {
   generateUsers,
 } from "./generators";
 
-const saveData = <T>(type: string, data: T) => {
-  const fileName = type.toLowerCase();
+const saveData = <T>(type: string, data: T, fileName?: string) => {
+  fileName = fileName || type.toLowerCase();
   const filepath = `./shared/data/mocks/${fileName}.ts`;
 
   fs.readFile(filepath).catch(() => {
     const content = `/* eslint-disable */
+// @ts-nocheck
 import { Db${type} } from '../types';
     
 export const ${fileName}: Db${type}[] = ${replace(
@@ -30,7 +31,7 @@ export const ${fileName}: Db${type}[] = ${replace(
 
 export const generateData = () => {
   const users = generateUsers();
-  saveData("Users", users);
+  saveData("User", users, "users");
   saveData("Facebook", generateFacebook(users));
   saveData("Instagram", generateInstagram(users));
   saveData("Google", generateGoogle(users));

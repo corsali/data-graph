@@ -1,20 +1,21 @@
 /* eslint-disable */
-import { DbUsers } from '../types';
+// @ts-nocheck
+import { DbUser } from '../types';
     
-export const users: DbUsers[] = [
+export const users: DbUser[] = [
   {
-    "id": "f8919ebb-1a2d-402c-be77-01bc534e80d4",
-    "firstName": "Taurean",
-    "lastName": "Torphy"
+    "id": "3a3c54ff-5f82-4988-b42f-d4c66e435c57",
+    "firstName": "Ryder",
+    "lastName": "Bailey"
   },
   {
-    "id": "c766b106-f092-497c-ab64-11ba67b39320",
-    "firstName": "Oswaldo",
-    "lastName": "Cruickshank"
+    "id": "2b1155f8-baa8-40e8-af0c-ced7215fff13",
+    "firstName": "Adriel",
+    "lastName": "Klocko"
   },
   {
-    "id": "2e166764-7ffe-43b0-9039-aa5cc4c87547",
-    "firstName": "Darrion",
-    "lastName": "Casper"
+    "id": "6743c201-c050-44c7-943b-e6309c55fe6b",
+    "firstName": "Delilah",
+    "lastName": "Welch"
   }
 ];

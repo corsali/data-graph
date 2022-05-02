@@ -1,18 +1,23 @@
 import React from "react";
 import "./App.scss";
 import { Provider } from "react-redux";
-import { Playground, store } from "graphql-playground-react";
+import { Playground, store, editQuery } from "graphql-playground-react";
 import { PlaygroundWrapperProps } from "graphql-playground-react/lib/components/PlaygroundWrapper";
 import { DeepPartial } from "@shared/types";
 import { RequestDataModal, PendingCategoriesModal } from "@shared/components";
-import { editorPrettierSettings } from "@shared/query-editor";
+import { editorPrettierSettings, defaultQuery } from "@shared/query-editor";
 import { Box, Button } from "@mui/material";
 import { gqlEndpoint } from "@shared/api";
 
 const App = () => {
+  React.useEffect(() => {
+    store.getState();
+    store.dispatch(editQuery(defaultQuery));
+  }, []);
+
   return (
-    <div className="flex flex-col items-stretch mx-4 h-full">
-      <div className="flex width-full align-center justify-between text-slate-800 h-16">
+    <div className="flex flex-col items-stretch h-full overflow-hidden">
+      <div className="flex width-full align-center justify-between text-slate-800 h-16 mx-4">
         <div>
           <img className="max-h-full" alt="Vana Logo" src="logo.png"></img>
         </div>
