@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
+    "build": "echo $REACT_APP_API_URL; echo $REACT_APP_CATEGORIES_API_URL; NODE_ENV=production && node scripts/build.js",
     "test": "node scripts/test.js",
     "gen:cats": "node scripts/gen-categories.js"
   },

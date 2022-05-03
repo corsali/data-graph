@@ -3,7 +3,6 @@
 ## Explorer
 
 ### Local development
-
 ```
 npm install && npm start
 ```
