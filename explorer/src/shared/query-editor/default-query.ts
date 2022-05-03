@@ -2,9 +2,6 @@ export const defaultQuery = `# Currently Supported Queryable Data
 
 query AvailableData {
   users {
-    id
-    firstName
-    lastName
     facebook {
       friendsAndFollowers {
         name

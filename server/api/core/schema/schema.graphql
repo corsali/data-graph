@@ -1,12 +1,7 @@
-scalar ComingSoon
-
 type User @key(fields: "id") {
   id: ID!
-  firstName: String
-  lastName: String
 }
 
 extend type Query {
-  user(id: ID!): User
   users: [User]
 }

@@ -1,11 +1,11 @@
 import { Facebook, Google, Instagram, Netflix, User } from "../graphql";
 
-export type DbUser = Pick<User, "firstName" | "lastName"> & { id: string };
+export type DbUser = Pick<User, "id">;
 
-export type DbFacebook = Facebook & Omit<DbUser, "id"> & { userId: string };
+export type DbFacebook = Facebook & { userId: string };
 
-export type DbGoogle = Google & Omit<DbUser, "id"> & { userId: string };
+export type DbGoogle = Google & { userId: string };
 
-export type DbInstagram = Instagram & Omit<DbUser, "id"> & { userId: string };
+export type DbInstagram = Instagram & { userId: string };
 
-export type DbNetflix = Netflix & Omit<DbUser, "id"> & { userId: string };
+export type DbNetflix = Netflix & { userId: string };
