@@ -7,6 +7,13 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 import { theme } from "@shared/theme";
 import { Provider } from "react-redux";
 import { store } from "graphql-playground-react";
+import LogRocket from "logrocket";
+import { isProd, logRocketId } from "@shared/environment";
+
+if (isProd && logRocketId) {
+  LogRocket.init(logRocketId);
+}
+
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>

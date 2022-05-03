@@ -1,4 +1,4 @@
-import { availableCategoriesEndpoint } from "@shared/api";
+import { availableCategoriesEndpoint } from "@shared/environment";
 import { useEffect, useState } from "react";
 import { Service } from "./categories";
 

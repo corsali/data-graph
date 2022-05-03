@@ -7,7 +7,7 @@ import { DeepPartial } from "@shared/types";
 import { RequestDataModal, PendingCategoriesModal } from "@shared/components";
 import { editorPrettierSettings, defaultQuery } from "@shared/query-editor";
 import { Box, Button } from "@mui/material";
-import { gqlEndpoint } from "@shared/api";
+import { gqlEndpoint } from "@shared/environment";
 
 const App = () => {
   React.useEffect(() => {
