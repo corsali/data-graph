@@ -16,6 +16,12 @@ export const PendingCategoriesModal: React.FC<PendingCategoriesModalProps> = ({
 }) => {
   const { isModalOpen, closeModal, openModal } = useModal();
   const { categories, categoriesAmount } = usePendingCategories();
+  console.log({
+    apiUrl: process.env.REACT_APP_API_URL,
+    catUrl: process.env.REACT_APP_CATEGORIES_API_URL,
+    formUrl: process.env.REACT_APP_FORM_URL,
+    env: process.env,
+  });
 
   return (
     <>
