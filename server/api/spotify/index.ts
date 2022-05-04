@@ -1,6 +1,7 @@
-import { createSubgraphServer, Service } from "../../shared";
-import { typeDefs } from "./schema";
+import { createSubgraphServer, getTypeDefs, Service } from "../../shared";
 import { resolvers } from "./resolvers";
+
+export const typeDefs = getTypeDefs(`${__dirname}/schema.graphql`);
 
 createSubgraphServer({
   name: Service.Spotify,

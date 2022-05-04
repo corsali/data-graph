@@ -1,5 +1,5 @@
-import { netflixDb } from "../../../shared";
-import * as gqlTypes from "../../../shared/graphql";
+import { netflixDb } from "../../shared";
+import * as gqlTypes from "../../shared/graphql";
 
 export const resolvers: gqlTypes.Resolvers = {
   User: {

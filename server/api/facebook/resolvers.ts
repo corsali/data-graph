@@ -1,5 +1,5 @@
-import * as gqlTypes from "../../../shared/graphql";
-import { facebookDb } from "../../../shared";
+import * as gqlTypes from "../../shared/graphql";
+import { facebookDb } from "../../shared";
 
 export const resolvers: gqlTypes.Resolvers = {
   User: {
