@@ -1,6 +1,6 @@
 /* eslint-disable */
 // @ts-nocheck
-import { DbInstagram } from './data-generator';
+import { DbInstagram } from './types';
     
 export const mockInstagramData: DbInstagram[] = [
   {
