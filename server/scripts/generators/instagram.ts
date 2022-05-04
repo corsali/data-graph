@@ -1,12 +1,12 @@
 import faker from "@faker-js/faker";
-import { DbInstagram, DbUser } from "../types";
+import { DbInstagram } from "../../api/instagram/types";
 
-export const generateInstagram = (users: DbUser[]): DbInstagram[] =>
-  users.map(({ id, firstName, lastName }) => {
+export const generateInstagram = (
+  users: Array<{ id: string }>
+): DbInstagram[] =>
+  users.map(({ id }) => {
     return {
       userId: id,
-      firstName,
-      lastName,
       followersAndFollowing: [
         {
           name: "Instagram",

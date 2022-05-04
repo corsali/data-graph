@@ -1,6 +1,9 @@
 import * as gqlTypes from "../../shared/graphql";
-import { facebookDb } from "../../shared";
+import { createMock } from "../../shared";
+import { mockFacebookData } from "./data";
+import { DbFacebook } from "./types";
 
+export const facebookDb = createMock<DbFacebook>("facebook", mockFacebookData);
 export const resolvers: gqlTypes.Resolvers = {
   User: {
     async facebook({ id: userId }) {

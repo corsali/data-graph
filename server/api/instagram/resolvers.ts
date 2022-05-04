@@ -1,5 +1,13 @@
-import { instagramDb } from "../../shared";
+import { createMock } from "../../shared";
 import * as gqlTypes from "../../shared/graphql";
+import { mockInstagramData } from "./data";
+import { DbInstagram } from "./types";
+
+
+export const instagramDb = createMock<DbInstagram>(
+  "instagram",
+  mockInstagramData
+);
 
 export const resolvers: gqlTypes.Resolvers = {
   User: {
