@@ -38,7 +38,7 @@ export const availableCategories = {
 
 
 /**
- * EXAMPLE: copy this snippet and replace the `example` with proper service name. 
+ * EXAMPLE: copy the snippet below and replace the `example` with proper service name. 
  * Add the renamed `exampleService` to the exported `availableCategories` 
  */
 
