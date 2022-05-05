@@ -26,12 +26,14 @@ const App = () => {
     >
       <Box
         display="flex"
+        alignItems="center"
         justifyContent="space-between"
-        px={4}
-        height={64}
+        pl={{ xs: 0, sm: 4 }}
+        pr={{ xs: 2, sm: 4 }}
+        height={{ xs: 86, sm: 64 }}
         width="100%"
       >
-        <img className="max-h-full" alt="Vana Logo" src="logo.png" />
+        <img className="max-h-16" alt="Vana Logo" src="logo.png" />
         <Box display="flex" alignItems="center" color="primary.dark" gap={3}>
           <PendingCategoriesModal>
             {({ openModal, categoriesAmount }) =>

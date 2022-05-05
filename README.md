@@ -47,7 +47,7 @@ Webpack aliases are not working with Vercel serverless with the present config.
 
 ### Adding services/schema fields
 
-- Go to `server/api/` and create a folder mirroring the structure of other present services.
+- Go to `server/api/` and create a folder mirroring the structure of other present services, preferably copying one of them and changing.
 - Add a `start:<SERVICE_NAME>` script to package json mirroring the existing ones.
 - Add the new service to the dictionary and local development ports config in `server/shared/env/index.ts`
 - Create the schema for the new service, not forgetting to `extend type User` with the new service.
@@ -57,8 +57,6 @@ Webpack aliases are not working with Vercel serverless with the present config.
 ### Adding mock data
 Optional steps are only used for services with no previously available mock data 
 
-- Go to `server/shared/data/generators` and add/update a generator for the service, mirroring the existing ones.
-- (optional) Add `Db<SERVICE_NAME>` type definition to `server/shared/data/types.ts`.
-- (optional) Go to `server/shared/data/gen-mocks.ts` and add a call to the new generator in the `generateData` function.
-- Run `npm run gen:data` (or `npm run gen:data:clean` if you want to replace/modify the existing files - note that any manual changes will be discarded if you do this)
-- (optional) Go to `server/shared/data/index.ts` and add the mock data for the new service to a mock database to use in resolvers
+- Go to `server/api/<SERVICE_NAME>/data-generator.ts` and add/update a generator for the service, mirroring the existing ones.
+- (optional) Go to `server/scripts/gen-mocks.ts` and add a call to the new generator in the `generateData` function.
+- (optional, developer only) Run `npm run gen:data` (or `npm run gen:data:clean` if you want to replace/modify the existing files - note that any manual changes will be discarded if you do this)

@@ -1,13 +1,11 @@
-import { SearchHistoryRecordType } from "../../graphql";
+import { SearchHistoryRecordType } from "../../shared";
 import faker from "@faker-js/faker";
-import { DbGoogle, DbUser } from "../types";
+import { DbGoogle } from "../../api/google/types";
 
-export const generateGoogle = (users: DbUser[]): DbGoogle[] =>
-  users.map(({ id, firstName, lastName }) => {
+export const generateGoogle = (users: Array<{ id: string }>): DbGoogle[] =>
+  users.map(({ id }) => {
     return {
       userId: id,
-      firstName,
-      lastName,
       locationHistory: [
         {
           latitude: faker.mersenne.rand(999999999, -999999999),
