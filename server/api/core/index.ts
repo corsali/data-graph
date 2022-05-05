@@ -1,7 +1,5 @@
-import { createSubgraphServer, getTypeDefs, Service } from "../../shared";
-import { resolvers } from "../../domain/core";
-
-export const typeDefs = getTypeDefs(`${__dirname}/schema.graphql`);
+import { createSubgraphServer, Service } from "../../shared";
+import { resolvers, typeDefs } from "../../domain/core";
 
 createSubgraphServer({
   name: Service.Core,
