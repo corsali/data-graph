@@ -10,7 +10,7 @@ import {
   defaultQuery,
   useResponsiveEditor,
 } from "@shared/query-editor";
-import { Box, Button } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import { gqlEndpoint } from "@shared/environment";
 import { useIsMobile } from "@shared/theme";
 
@@ -20,13 +20,14 @@ const App = () => {
     store.getState();
     store.dispatch(editQuery(defaultQuery));
   }, []);
+  const isMobile = useIsMobile();
 
   return (
     <Box
       display="flex"
       flexDirection="column"
       alignItems="stretch"
-      height="100%"
+      height="100vh"
       overflow="hidden"
       bgcolor="background.default"
     >
@@ -36,7 +37,7 @@ const App = () => {
         justifyContent="space-between"
         pl={{ xs: 0, sm: 4 }}
         pr={{ xs: 2, sm: 4 }}
-        height={{ xs: 86, sm: 64 }}
+        height={64}
         width="100%"
       >
         <img className="max-h-16" alt="Vana Logo" src="logo.png" />
@@ -50,7 +51,12 @@ const App = () => {
                   color="inherit"
                   onClick={openModal}
                 >
-                  Data coming soon ({categoriesAmount})
+                  <Typography
+                    variant="button"
+                    fontSize={isMobile ? "0.6rem" : "0.8125rem"}
+                  >
+                    Data coming soon ({categoriesAmount})
+                  </Typography>
                 </Button>
               ) : (
                 <></>
@@ -60,28 +66,34 @@ const App = () => {
           <RequestDataModal>
             {({ openModal }) => (
               <Button variant="contained" size="small" onClick={openModal}>
-                Request Production Data
+                <Typography
+                  variant="button"
+                  fontSize={isMobile ? "0.6rem" : "0.8125rem"}
+                >
+                  Request Production Data
+                </Typography>
               </Button>
             )}
           </RequestDataModal>
         </Box>
       </Box>
-
-      <Provider store={store as any}>
-        <GQLEditor
-          endpoint={gqlEndpoint}
-          settings={{
-            "editor.theme": "light",
-            "tracing.tracingSupported": false,
-            "tracing.hideTracingResponse": true,
-            "schema.polling.interval": 30000,
-            "prettier.printWidth": editorPrettierSettings.printWidth,
-            "prettier.tabWidth": editorPrettierSettings.tabWidth,
-            "prettier.useTabs": editorPrettierSettings.useTabs,
-          }}
-          fixedEndpoint
-        />
-      </Provider>
+      <Box flex={1} overflow="hidden">
+        <Provider store={store as any}>
+          <GQLEditor
+            endpoint={gqlEndpoint}
+            settings={{
+              "editor.theme": "light",
+              "tracing.tracingSupported": false,
+              "tracing.hideTracingResponse": true,
+              "schema.polling.interval": 30000,
+              "prettier.printWidth": editorPrettierSettings.printWidth,
+              "prettier.tabWidth": editorPrettierSettings.tabWidth,
+              "prettier.useTabs": editorPrettierSettings.useTabs,
+            }}
+            fixedEndpoint
+          />
+        </Provider>
+      </Box>
     </Box>
   );
 };
