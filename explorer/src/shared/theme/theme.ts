@@ -37,14 +37,5 @@ export const theme = createTheme({
     text: { primary: "#1e293b" },
   }),
   variables,
-  components: {
-    MuiButton: {
-      styleOverrides: {
-        sizeSmall: ({ ownerState: { className } }) => ({
-          fontSize: className, //"0.5rem"
-        }),
-      },
-    },
-  },
   spacing: 4,
 });
