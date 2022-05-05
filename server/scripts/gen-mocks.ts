@@ -10,7 +10,7 @@ import {
 
 const saveData = <T>(type: string, data: T, service?: string) => {
   service = service || type.toLowerCase();
-  const filepath = `./api/${service}/data.ts`;
+  const filepath = `./domain/${service}/data.ts`;
 
   fs.readFile(filepath).catch(() => {
     const content = `/* eslint-disable */

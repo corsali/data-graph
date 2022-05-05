@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { whereEq, map, append, reject } from "ramda";
 
+export type WithUserId<T> = T & { userId: string };
+
 type Maybe<T> = T | null;
 
 class Database {
@@ -32,7 +34,7 @@ class Database {
 export const db = new Database();
 
 export const createMock = <T>(model: string, initialData: T[]) => {
-  db.register(model, initialData);  
+  db.register(model, initialData);
 
   const update = (updateFn: (data: T[]) => T[]) => db.update(model, updateFn);
   const getAll = () => db.get(model) as T[];

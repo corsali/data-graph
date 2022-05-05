@@ -1,4 +1,3 @@
-// TODO: fix webpack aliased import not working on vercel serverless correctly
 export enum Service {
   Core = "core",
   Facebook = "facebook",
@@ -9,12 +8,12 @@ export enum Service {
 }
 
 export const localPortsConfig: Record<Service, number> = {
-  core: 4000,
-  facebook: 4001,
-  google: 4002,
-  instagram: 4003,
-  netflix: 4004,
-  spotify: 4005,
+  [Service.Core]: 4000,
+  [Service.Facebook]: 4001,
+  [Service.Google]: 4002,
+  [Service.Instagram]: 4003,
+  [Service.Netflix]: 4004,
+  [Service.Spotify]: 4005,
 };
 
 export const localGatewayPort = 4100;

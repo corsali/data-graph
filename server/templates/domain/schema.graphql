@@ -1,0 +1,8 @@
+type NewService {
+  newServiceData: String
+}
+
+extend type User @key(fields: "id") {
+  id: ID!
+  newService: NewService
+}

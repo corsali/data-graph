@@ -29,4 +29,22 @@ const netflixKeys: NoTypenameKeysObj<Netflix> = {
 
 const netflix = Object.keys(netflixKeys) as NoTypenameKeys<Netflix>[];
 
-export const availableCategories = { facebook, google, instagram, netflix };
+export const availableCategories = {
+  facebook,
+  google,
+  instagram,
+  netflix,
+};
+
+
+/**
+ * EXAMPLE: copy this snippet and replace the `example` with proper service name. 
+ * Add the renamed `exampleService` to the exported `availableCategories` 
+ */
+
+const exampleServiceKeys: NoTypenameKeysObj<any> = {
+  exampleField: true,
+};
+
+const exampleService = Object.keys(exampleServiceKeys) as NoTypenameKeys<any>[];
+// END EXAMPLE

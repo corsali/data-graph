@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import helmet from "helmet";
 import { localRestApiPort } from "../../shared";
-import { categoriesRouter } from "./routes";
+import { categoriesRouter } from "../../domain/rest";
 
 const app = express();
 app.use(cors());

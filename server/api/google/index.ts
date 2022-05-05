@@ -1,5 +1,5 @@
 import { createSubgraphServer, getTypeDefs, Service } from "../../shared";
-import { resolvers } from "./resolvers";
+import { resolvers } from "../../domain/google";
 
 export const typeDefs = getTypeDefs(`${__dirname}/schema.graphql`);
 

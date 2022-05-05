@@ -1,7 +1,6 @@
 const { resolve } = require("path");
 const glob = require("glob");
 
-console.log({ asd: resolve(__dirname, "./shared/") });
 const alias = {
   "@api": resolve(__dirname, "./api/"),
   "@shared": resolve(__dirname, "./shared/"),
