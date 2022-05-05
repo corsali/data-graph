@@ -36,6 +36,15 @@ export const theme = createTheme({
     background: { default: "#dbdee0" },
     text: { primary: "#1e293b" },
   }),
+  breakpoints: {
+    values: {
+      xs: 700,
+      sm: 1000,
+      md: 1300,
+      lg: 1800,
+      xl: 2100,
+    },
+  },
   variables,
   spacing: 4,
 });

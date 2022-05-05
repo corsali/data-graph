@@ -5,11 +5,17 @@ import { Playground, store, editQuery } from "graphql-playground-react";
 import { PlaygroundWrapperProps } from "graphql-playground-react/lib/components/PlaygroundWrapper";
 import { DeepPartial } from "@shared/types";
 import { RequestDataModal, PendingCategoriesModal } from "@shared/components";
-import { editorPrettierSettings, defaultQuery } from "@shared/query-editor";
+import {
+  editorPrettierSettings,
+  defaultQuery,
+  useResponsiveEditor,
+} from "@shared/query-editor";
 import { Box, Button } from "@mui/material";
 import { gqlEndpoint } from "@shared/environment";
+import { useIsMobile } from "@shared/theme";
 
 const App = () => {
+  useResponsiveEditor();
   React.useEffect(() => {
     store.getState();
     store.dispatch(editQuery(defaultQuery));
