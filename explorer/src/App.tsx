@@ -70,7 +70,7 @@ const App = () => {
                   variant="button"
                   fontSize={isMobile ? "0.6rem" : "0.8125rem"}
                 >
-                  Request Production Data
+                  Contact Us
                 </Typography>
               </Button>
             )}
