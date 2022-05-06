@@ -2,6 +2,9 @@
 
 ## Manual graph management
 
+Example of the changes necessary to add a new service with simple data field declaration and mock data, can be found here:
+https://github.com/corsali/data-graph-demo/pull/2
+
 ### Adding services
 
 - Create properly named service folder inside `server/api`.
@@ -59,11 +62,17 @@ This section complements the previous one to keep the codebase clean and scalabl
 
 ### Adding services
 
-In addition to the steps described above, proper Typescript types should be provided.
+In addition to the steps described above, proper Typescript types should be provided and the service should be able to be run locally.
 
 - Run `npm run gen:gql` to generate the graphql types for the newly created service.
 - In `server/domain/<SERVICE_NAME>/types.ts`, update the `any` with a previously generated graphql service type.
 - In `server/domain/<SERVICE_NAME>/resolvers.ts` You should be able to simply remove all of the castings to `any`.
+- In `package.json` add a following script, replacing all `<SERVICE_NAME>`s with proper name:
+
+  ```
+   "start:<SERVICE_NAME>": "nodemon --ext ts,graphql --watch shared --watch api/<SERVICE_NAME> --watch domain/<SERVICE_NAME> --exec 'npm run node -- api/<SERVICE_NAME>/index.ts'",
+
+  ```
 
 ### Adding schema fields
 
