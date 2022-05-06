@@ -1,5 +1,4 @@
 // DO NOT REMOVE THE COMMENT: This file is created from copyable template
-// Replace all occurences of `sanity` in this file with proper service name
 import * as gqlTypes from "../../shared/graphql";
 import { createMock } from "../../shared";
 import { mockSanityData } from "./data";

@@ -2,14 +2,11 @@
 /* eslint-disable */
 // DO NOT REMOVE THE COMMENT: This file is created from copyable template
 
-// replace `DbServiceName` below with Db<SERVICE_NAME>
 import { DbSanity } from "./types";
 
-// replace `mockNewServiceData` and `DbServiceName` below with `mock<SERVICE_NAME>Data` and `Db<SERVICE_NAME>`
 export const mockSanityData: DbSanity[] = [
   {
     userId: "7f3d4ead-0c4a-4ed5-9656-30f914019833",
-    // replace `newServiceData` here and in each object below with proper fields defined in schema
     sanity: { sanityData: "Example data" },
   },
   {

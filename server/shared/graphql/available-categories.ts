@@ -44,12 +44,12 @@ export const availableCategories = {
 
 /**
  * EXAMPLE: copy the snippet below and replace the `example` with proper service name.
- * Add the renamed `sanity` to the exported `availableCategories`
+ * Add the renamed `exampleService` to the exported `availableCategories`
  */
 
-// const sanityKeys: NoTypenameKeysObj<any> = {
-//   exampleField: true,
-// };
+const exampleServiceKeys: NoTypenameKeysObj<any> = {
+  exampleField: true,
+};
 
-// const sanity = Object.keys(sanityKeys) as NoTypenameKeys<any>[];
+const exampleService = Object.keys(exampleServiceKeys) as NoTypenameKeys<any>[];
 // END EXAMPLE
