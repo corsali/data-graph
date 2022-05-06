@@ -1,4 +1,5 @@
 import { Box, Dialog, Typography } from "@mui/material";
+import { useIsMobile } from "@shared/theme";
 import { PropsWithModalOpener, useModal } from "@shared/utils";
 import React from "react";
 import {
@@ -35,6 +36,8 @@ export type PendingCategoriesModalContentProps = {
 export const PendingCategoriesModalContent: React.FC<PendingCategoriesModalContentProps> = ({
   categories,
 }) => {
+  const isMobile = useIsMobile();
+
   return (
     <Box display="flex" flexDirection="column">
       <Typography
@@ -69,7 +72,7 @@ export const PendingCategoriesModalContent: React.FC<PendingCategoriesModalConte
                     <Typography
                       textTransform="capitalize"
                       color={isAvailable ? "secondary.light" : "grey.300"}
-                      variant="body2"
+                      variant={isMobile ? "caption" : "body2"}
                       component={Box}
                     >
                       <Typography
@@ -81,7 +84,13 @@ export const PendingCategoriesModalContent: React.FC<PendingCategoriesModalConte
                         {isAvailable ? "✔" : "•"}
                       </Typography>
                     </Typography>
-                    <Typography textTransform="capitalize" variant="body2">
+                    <Typography
+                      textTransform="capitalize"
+                      component={Box}
+                      overflow="hidden"
+                      textOverflow="ellipsis"
+                      variant={isMobile ? "caption" : "body2"}
+                    >
                       {cat}
                     </Typography>
                   </Box>

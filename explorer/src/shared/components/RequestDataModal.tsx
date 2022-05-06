@@ -4,6 +4,7 @@ import React from "react";
 import { pipe } from "ramda";
 import { useSelector } from "react-redux";
 import { getQuery } from "graphql-playground-react";
+import { useIsMobile } from "@shared/theme";
 
 export type RequestDataModalProps = PropsWithModalOpener<{}>;
 
@@ -14,18 +15,23 @@ export const RequestDataModal: React.FC<RequestDataModalProps> = ({
   const [formUrl, setFormUrl] = React.useState("");
   const [isLoading, setIsLoading] = React.useState(true);
   const { isModalOpen, closeModal, openModal } = useModal();
+  const isMobile = useIsMobile();
 
   const handleOpen = () => pipe(prepFullFormUrl, setFormUrl, openModal)(query);
 
   return (
     <>
       <Children openModal={handleOpen} />
-      <Dialog onClose={closeModal} open={isModalOpen}>
+      <Dialog
+        PaperProps={{ className: isMobile ? "w-full" : "" }}
+        onClose={closeModal}
+        open={isModalOpen}
+      >
         {isModalOpen && formUrl && (
           <iframe
             title="request-data-form"
             src={formUrl}
-            width="600"
+            width={isMobile ? "100%" : "600"}
             height="6200"
             frameBorder="0"
             marginHeight={0}

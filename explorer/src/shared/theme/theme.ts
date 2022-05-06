@@ -47,4 +47,5 @@ export const theme = createTheme({
   },
   variables,
   spacing: 4,
+  components: { MuiDialog: { styleOverrides: { root: { width: "100%" } } } },
 });
