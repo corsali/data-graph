@@ -1,4 +1,5 @@
-scalar Date 
+scalar Date
+
 type NetflixMovie {
   title: String!
   cover: String!

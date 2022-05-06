@@ -12,5 +12,5 @@ type Spotify {
 
 extend type User @key(fields: "id") {
   id: ID!
-  spotify: ComingSoon! @deprecated(reason: "Coming Soon")
-  }
+  spotify: ComingSoon!
+}

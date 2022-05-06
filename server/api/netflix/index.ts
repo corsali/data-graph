@@ -1,5 +1,5 @@
 import { createSubgraphServer, Service } from "../../shared";
-import { resolvers, typeDefs } from "../../domain/facebook";
+import { resolvers, typeDefs } from "../../domain/netflix";
 
 createSubgraphServer({
   name: Service.Netflix,

@@ -36,10 +36,9 @@ export const availableCategories = {
   netflix,
 };
 
-
 /**
- * EXAMPLE: copy the snippet below and replace the `example` with proper service name. 
- * Add the renamed `exampleService` to the exported `availableCategories` 
+ * EXAMPLE: copy the snippet below and replace the `example` with proper service name.
+ * Add the renamed `exampleService` to the exported `availableCategories`
  */
 
 const exampleServiceKeys: NoTypenameKeysObj<any> = {
