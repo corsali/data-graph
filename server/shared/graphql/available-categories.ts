@@ -29,7 +29,13 @@ const netflixKeys: NoTypenameKeysObj<Netflix> = {
 
 const netflix = Object.keys(netflixKeys) as NoTypenameKeys<Netflix>[];
 
+const sanityKeys: NoTypenameKeysObj<any> = {
+  sanityData: true,
+};
+
+const sanity = Object.keys(sanityKeys) as NoTypenameKeys<any>[];
 export const availableCategories = {
+  sanity,
   facebook,
   google,
   instagram,
@@ -38,12 +44,12 @@ export const availableCategories = {
 
 /**
  * EXAMPLE: copy the snippet below and replace the `example` with proper service name.
- * Add the renamed `exampleService` to the exported `availableCategories`
+ * Add the renamed `sanity` to the exported `availableCategories`
  */
 
-const exampleServiceKeys: NoTypenameKeysObj<any> = {
-  exampleField: true,
-};
+// const sanityKeys: NoTypenameKeysObj<any> = {
+//   exampleField: true,
+// };
 
-const exampleService = Object.keys(exampleServiceKeys) as NoTypenameKeys<any>[];
+// const sanity = Object.keys(sanityKeys) as NoTypenameKeys<any>[];
 // END EXAMPLE

@@ -1,0 +1,9 @@
+type Sanity {
+  sanityData: String
+}
+
+extend type User @key(fields: "id") {
+  id: ID!
+  # replace `newService` with proper data fields
+  sanity: Sanity
+}

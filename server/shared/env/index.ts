@@ -5,6 +5,7 @@ export enum Service {
   Instagram = "instagram",
   Netflix = "netflix",
   Spotify = "spotify",
+  Sanity = "sanity",
 }
 
 export const localPortsConfig: Record<Service, number> = {
@@ -14,6 +15,7 @@ export const localPortsConfig: Record<Service, number> = {
   [Service.Instagram]: 4003,
   [Service.Netflix]: 4004,
   [Service.Spotify]: 4005,
+  [Service.Sanity]: 4006,
 };
 
 export const localGatewayPort = 4100;

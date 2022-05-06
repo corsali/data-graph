@@ -17,6 +17,7 @@
     "start:instagram": "nodemon --ext ts,graphql --watch shared --watch api/instagram --watch domain/instagram --exec 'npm run node -- api/instagram/index.ts'",
     "start:netflix": "nodemon --ext ts,graphql --watch shared --watch api/netflix --watch domain/netflix --exec 'npm run node -- api/netflix/index.ts'",
     "start:spotify": "nodemon --ext ts,graphql --watch shared --watch api/spotify --watch domain/spotify --exec 'npm run node -- api/spotify/index.ts'",
+    "start:sanity": "nodemon --ext ts,graphql --watch shared --watch api/sanity --watch domain/sanity --exec 'npm run node -- api/sanity/index.ts'",
     "node": "TS_NODE_TRANSPILE_ONLY=true NODE_OPTIONS=${npm_package_config_node_options} node",
     "postinstall": "npm run gen:gql"
   },
