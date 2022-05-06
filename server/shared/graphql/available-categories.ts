@@ -29,7 +29,13 @@ const netflixKeys: NoTypenameKeysObj<Netflix> = {
 
 const netflix = Object.keys(netflixKeys) as NoTypenameKeys<Netflix>[];
 
+const sanityKeys: NoTypenameKeysObj<any> = {
+  sanityData: true,
+};
+
+const sanity = Object.keys(sanityKeys) as NoTypenameKeys<any>[];
 export const availableCategories = {
+  sanity,
   facebook,
   google,
   instagram,

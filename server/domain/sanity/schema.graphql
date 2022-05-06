@@ -1,0 +1,8 @@
+type Sanity {
+  sanityData: String
+}
+
+extend type User @key(fields: "id") {
+  id: ID!
+  sanity: Sanity
+}
