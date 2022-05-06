@@ -4,10 +4,11 @@
 
 ### Adding services
 
-- Create properly named service folder inside `server/api`
-- Create properly named service folder inside `server/domain`
-- Copy `index.ts` from `templates/api` into `server/api/<SERVICE_NAME>` and follow the instructions inside the file
-- Copy all files from `templates/domain` into `server/domain/<SERVICE_NAME>` and follow the instructions inside them
+- Create properly named service folder inside `server/api`.
+- Create properly named service folder inside `server/domain`.
+- Copy `index.ts` from `templates/api` into `server/api/<SERVICE_NAME>` and follow the instructions inside the file.
+- Copy all files from `templates/domain` into `server/domain/<SERVICE_NAME>` and follow the instructions inside them.
+- Add `<SERVICE_NAME>` to the `categories` object inside `explorer/src/shared/categories/categories.ts`.
 - Open `server/shared/graphql/available-categories.ts` and add `<SERVICE_NAME>` array, looking like the following:
 
   ```
@@ -19,8 +20,6 @@
   ...
   };
   ```
-
-- Add `<SERVICE_NAME>` to the `categories` object inside `explorer/src/shared/categories/categories.ts`.
 
 ### Adding schema fields
 

@@ -4,5 +4,6 @@ type NewService {
 
 extend type User @key(fields: "id") {
   id: ID!
+  # replace `newService` with proper data fields
   newService: NewService
 }
