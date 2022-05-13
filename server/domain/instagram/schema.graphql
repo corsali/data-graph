@@ -6,9 +6,54 @@ type InstagramAccount {
   followingSince: Date!
 }
 
-type Instagram {
-  followersAndFollowing: [InstagramAccount]
+type InstagramUserTopics {
+  yourTopics: [String!]
+  yourReelsTopics: [String!]
+  yourReelsSentiments: [String!]
 }
+
+type InstagramAccountBasedIn {
+  inferredDataPrimaryLocation: String!
+}
+
+type InstagramInformationAboutUser {
+  accountBasedIn: InstagramAccountBasedIn
+}
+
+type InstagramAdvertiserUsingYourActivityOrInformation {
+  name: String!
+  basedOnUploadedList: Boolean!
+  basedOnYourInteractions: Boolean!
+}
+
+type InstagramAdsAndBusinesses {
+  advertisersUsingYourActivityOrInformation: [InstagramAdvertiserUsingYourActivityOrInformation!]
+}
+
+type InstagramView {
+  viewedOn: Date!
+  author: String!
+}
+
+type InstagramAdsAndTopics {
+  adsViewed: [InstagramView!]
+  postsViewed: [InstagramView!]
+}
+
+type Instagram {
+  followersAndFollowing: [InstagramAccount!]
+  yourTopics: InstagramUserTopics
+  informationAboutYou: InstagramInformationAboutUser
+  adsAndBusinesses: InstagramAdsAndBusinesses
+  adsAndTopics: InstagramAdsAndTopics
+}
+
+# instagram {
+#     informationAboutYou {
+#         inferredDataIgInterest // wrong schema?
+#     }
+#     pastInstagramInsights // no data
+# }
 
 extend type User @key(fields: "id") {
   id: ID!

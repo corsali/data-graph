@@ -1,6 +1,5 @@
 import faker from "@faker-js/faker";
-import { DbFacebook } from "../../api/facebook/types";
-import { Facebook } from "../../shared";
+import { DbFacebook } from "../../domain/facebook/types";
 
 export const generateFacebook = (users: Array<{ id: string }>): DbFacebook[] =>
   users.map(({ id }) => {

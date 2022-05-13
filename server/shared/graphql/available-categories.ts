@@ -19,6 +19,10 @@ const google = Object.keys(googleKeys) as NoTypenameKeys<Google>[];
 
 const instagramKeys: NoTypenameKeysObj<Instagram> = {
   followersAndFollowing: true,
+  adsAndBusinesses: true,
+  adsAndTopics: true,
+  informationAboutYou: true,
+  yourTopics: true,
 };
 
 const instagram = Object.keys(instagramKeys) as NoTypenameKeys<Instagram>[];

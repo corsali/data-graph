@@ -1,5 +1,5 @@
 import faker from "@faker-js/faker";
-import { DbNetflix } from "../../api/netflix/types";
+import { DbNetflix } from "../../domain/netflix/types";
 
 export const generateNetflix = (users: Array<{ id: string }>): DbNetflix[] =>
   users.map(({ id }) => {

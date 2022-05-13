@@ -1,6 +1,6 @@
 import { SearchHistoryRecordType } from "../../shared";
 import faker from "@faker-js/faker";
-import { DbGoogle } from "../../api/google/types";
+import { DbGoogle } from "../../domain/google/types";
 
 export const generateGoogle = (users: Array<{ id: string }>): DbGoogle[] =>
   users.map(({ id }) => {

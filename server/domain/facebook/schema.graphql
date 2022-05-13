@@ -49,6 +49,49 @@ type Facebook {
   posts: [FacebookPost]
 }
 
+# facebook {
+#     your_places
+#     dating {
+#         yourDatingProfile
+#         yourDatingPreferences
+#         yourDatingActivity
+#     }
+#     facebookMarketplace {
+#         sellerInformation
+#         marketplaceNotifications
+#         itemsSold
+#         buyerAndSellerRatings
+#     }
+#     yourTopics {
+#         yourTopics
+#         topicsYouFollow
+#     }
+#     location {
+#         timezone
+#         primaryPublicLocation
+#         lastLocation
+#         deviceLocation
+#     }
+#     adsInformation {
+#         informationYouveSubmittedToAdvertisers
+#         advertisersYouveInteractedWith
+#         advertisersUsingYourActivityOrInformation
+#     }
+#     appsAndWebsitesOffOfFacebook {
+#         yourOffFacebookActivity
+#         postsFromAppsAndWebsites
+#         appsAndWebsites
+#     }
+#     facebookNews {
+#         yourTopics
+#         yourLocations
+#     }
+#     otherLoggedInformation {
+#         friendPeerGroup
+#         adsInterests
+#     }
+# }
+
 extend type User @key(fields: "id") {
   id: ID!
   facebook: Facebook

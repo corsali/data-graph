@@ -6,6 +6,36 @@ type Google {
   locationHistory: [LocationHistoryRecord!]!
   calendar: ComingSoon! @deprecated(reason: "Coming Soon")
 }
+# google {
+#     googlePlayStore {
+#         installs
+#         library
+#         promotionHistory
+#         purchaseHistory
+#         reviews
+#         devices
+#         subscriptions
+#     }
+#     youtubeAndYoutubeMusic {
+#         history {
+#             watchHistory
+#             searchHistory
+#         }
+#         subscriptions
+#         playlists
+#     }
+#     maps {
+#         myLabeledPlaces
+#     }
+#     chrome {
+#         browserHistory
+#         searchEngines
+#     }
+#     news {
+#         followedTopics
+#         followedSources
+#     }
+# }
 
 enum SearchHistoryRecordType {
   SEARCH
@@ -29,3 +59,4 @@ extend type User @key(fields: "id") {
   id: ID!
   google: Google
 }
+

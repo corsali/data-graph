@@ -1,66 +1,279 @@
 /* eslint-disable */
 // @ts-nocheck
 import { DbInstagram } from "./types";
-
+    
 export const mockInstagramData: DbInstagram[] = [
   {
-    userId: "7f3d4ead-0c4a-4ed5-9656-30f914019833",
-    followersAndFollowing: [
+    "userId": "a30b212f-3bab-440b-9c18-ea8a0032038d",
+    "adsAndBusinesses": {
+      "advertisersUsingYourActivityOrInformation": [
+        {
+          "basedOnUploadedList": true,
+          "basedOnYourInteractions": false,
+          "name": "entrepreneur"
+        },
+        {
+          "basedOnUploadedList": true,
+          "basedOnYourInteractions": false,
+          "name": "error"
+        },
+        {
+          "basedOnUploadedList": true,
+          "basedOnYourInteractions": true,
+          "name": "collector"
+        }
+      ]
+    },
+    "adsAndTopics": {
+      "adsViewed": [
+        {
+          "author": "temp",
+          "viewedOn": new Date("2022-05-13T09:40:29.368Z")
+        },
+        {
+          "author": "restroom",
+          "viewedOn": new Date("2022-05-13T13:24:22.068Z")
+        },
+        {
+          "author": "vicinity",
+          "viewedOn": new Date("2022-05-12T20:56:13.943Z")
+        }
+      ],
+      "postsViewed": [
+        {
+          "author": "chasuble",
+          "viewedOn": new Date("2022-05-12T23:55:23.265Z")
+        },
+        {
+          "author": "dare",
+          "viewedOn": new Date("2022-05-13T08:14:29.031Z")
+        },
+        {
+          "author": "settlement",
+          "viewedOn": new Date("2022-05-12T17:09:14.688Z")
+        }
+      ]
+    },
+    "informationAboutYou": {
+      "accountBasedIn": {
+        "inferredDataPrimaryLocation": "Jacksonville, Florida"
+      }
+    },
+    "yourTopics": {
+      "yourReelsSentiments": [
+        "Adorable",
+        "Emotional",
+        "Exciting"
+      ],
+      "yourReelsTopics": [
+        "Trick Stunts",
+        "Fandom",
+        "Outdoor Nature"
+      ],
+      "yourTopics": [
+        "Trick Stunts",
+        "Video Games",
+        "Vacation & Leisure Activities"
+      ]
+    },
+    "followersAndFollowing": [
       {
-        name: "Instagram",
-        url: "https://www.instagram.com/instagram",
-        followingSince: new Date("2022-05-04T08:49:08.606Z"),
+        "name": "Instagram",
+        "url": "https://www.instagram.com/instagram",
+        "followingSince": new Date("2022-05-13T10:46:21.065Z")
       },
       {
-        name: "mutton",
-        url: "https://www.instagram.com/mutton",
-        followingSince: new Date("2022-05-03T13:12:03.169Z"),
+        "name": "access",
+        "url": "https://www.instagram.com/access",
+        "followingSince": new Date("2022-05-13T00:10:52.233Z")
       },
       {
-        name: "chrome",
-        url: "https://www.instagram.com/chrome",
-        followingSince: new Date("2022-05-04T04:33:09.636Z"),
-      },
-    ],
+        "name": "priest",
+        "url": "https://www.instagram.com/priest",
+        "followingSince": new Date("2022-05-13T01:48:49.786Z")
+      }
+    ]
   },
   {
-    userId: "ffe449ec-1571-4ce3-bda3-9bcc65e12c8a",
-    followersAndFollowing: [
+    "userId": "17e6b53e-adcc-478b-a489-da57d9d61818",
+    "adsAndBusinesses": {
+      "advertisersUsingYourActivityOrInformation": [
+        {
+          "basedOnUploadedList": true,
+          "basedOnYourInteractions": false,
+          "name": "pimp"
+        },
+        {
+          "basedOnUploadedList": true,
+          "basedOnYourInteractions": false,
+          "name": "underweight"
+        },
+        {
+          "basedOnUploadedList": true,
+          "basedOnYourInteractions": false,
+          "name": "handgun"
+        }
+      ]
+    },
+    "adsAndTopics": {
+      "adsViewed": [
+        {
+          "author": "clogs",
+          "viewedOn": new Date("2022-05-13T07:32:10.783Z")
+        },
+        {
+          "author": "science",
+          "viewedOn": new Date("2022-05-12T22:53:20.560Z")
+        },
+        {
+          "author": "teacher",
+          "viewedOn": new Date("2022-05-13T08:55:27.695Z")
+        }
+      ],
+      "postsViewed": [
+        {
+          "author": "majority",
+          "viewedOn": new Date("2022-05-12T19:29:58.797Z")
+        },
+        {
+          "author": "element",
+          "viewedOn": new Date("2022-05-13T00:51:03.040Z")
+        },
+        {
+          "author": "upstairs",
+          "viewedOn": new Date("2022-05-13T13:03:14.049Z")
+        }
+      ]
+    },
+    "informationAboutYou": {
+      "accountBasedIn": {
+        "inferredDataPrimaryLocation": "Jacksonville, Florida"
+      }
+    },
+    "yourTopics": {
+      "yourReelsSentiments": [
+        "Adorable",
+        "Emotional",
+        "Exciting"
+      ],
+      "yourReelsTopics": [
+        "Trick Stunts",
+        "Fandom",
+        "Outdoor Nature"
+      ],
+      "yourTopics": [
+        "Trick Stunts",
+        "Video Games",
+        "Vacation & Leisure Activities"
+      ]
+    },
+    "followersAndFollowing": [
       {
-        name: "Instagram",
-        url: "https://www.instagram.com/instagram",
-        followingSince: new Date("2022-05-04T01:36:32.003Z"),
+        "name": "Instagram",
+        "url": "https://www.instagram.com/instagram",
+        "followingSince": new Date("2022-05-12T17:11:14.058Z")
       },
       {
-        name: "coincidence",
-        url: "https://www.instagram.com/coincidence",
-        followingSince: new Date("2022-05-04T05:55:19.530Z"),
+        "name": "eyestrain",
+        "url": "https://www.instagram.com/eyestrain",
+        "followingSince": new Date("2022-05-12T22:25:13.380Z")
       },
       {
-        name: "victim",
-        url: "https://www.instagram.com/victim",
-        followingSince: new Date("2022-05-04T02:16:10.439Z"),
-      },
-    ],
+        "name": "secret",
+        "url": "https://www.instagram.com/secret",
+        "followingSince": new Date("2022-05-13T07:01:52.582Z")
+      }
+    ]
   },
   {
-    userId: "f49e6295-b93e-4f21-b2a9-523ff8d4a068",
-    followersAndFollowing: [
+    "userId": "1c3ae499-ae97-4d01-a9b0-a03dd7ef8585",
+    "adsAndBusinesses": {
+      "advertisersUsingYourActivityOrInformation": [
+        {
+          "basedOnUploadedList": true,
+          "basedOnYourInteractions": false,
+          "name": "request"
+        },
+        {
+          "basedOnUploadedList": true,
+          "basedOnYourInteractions": true,
+          "name": "perfection"
+        },
+        {
+          "basedOnUploadedList": true,
+          "basedOnYourInteractions": false,
+          "name": "glider"
+        }
+      ]
+    },
+    "adsAndTopics": {
+      "adsViewed": [
+        {
+          "author": "ownership",
+          "viewedOn": new Date("2022-05-13T12:50:56.764Z")
+        },
+        {
+          "author": "impostor",
+          "viewedOn": new Date("2022-05-12T23:03:51.842Z")
+        },
+        {
+          "author": "morale",
+          "viewedOn": new Date("2022-05-13T06:26:33.630Z")
+        }
+      ],
+      "postsViewed": [
+        {
+          "author": "simplification",
+          "viewedOn": new Date("2022-05-12T14:54:49.279Z")
+        },
+        {
+          "author": "clothes",
+          "viewedOn": new Date("2022-05-13T12:18:11.574Z")
+        },
+        {
+          "author": "linseed",
+          "viewedOn": new Date("2022-05-13T01:26:04.381Z")
+        }
+      ]
+    },
+    "informationAboutYou": {
+      "accountBasedIn": {
+        "inferredDataPrimaryLocation": "Jacksonville, Florida"
+      }
+    },
+    "yourTopics": {
+      "yourReelsSentiments": [
+        "Adorable",
+        "Emotional",
+        "Exciting"
+      ],
+      "yourReelsTopics": [
+        "Trick Stunts",
+        "Fandom",
+        "Outdoor Nature"
+      ],
+      "yourTopics": [
+        "Trick Stunts",
+        "Video Games",
+        "Vacation & Leisure Activities"
+      ]
+    },
+    "followersAndFollowing": [
       {
-        name: "Instagram",
-        url: "https://www.instagram.com/instagram",
-        followingSince: new Date("2022-05-03T20:34:37.739Z"),
+        "name": "Instagram",
+        "url": "https://www.instagram.com/instagram",
+        "followingSince": new Date("2022-05-13T00:04:18.284Z")
       },
       {
-        name: "mill",
-        url: "https://www.instagram.com/mill",
-        followingSince: new Date("2022-05-04T08:14:04.845Z"),
+        "name": "flan",
+        "url": "https://www.instagram.com/flan",
+        "followingSince": new Date("2022-05-12T17:19:23.080Z")
       },
       {
-        name: "plight",
-        url: "https://www.instagram.com/plight",
-        followingSince: new Date("2022-05-04T03:12:11.246Z"),
-      },
-    ],
-  },
+        "name": "trousers",
+        "url": "https://www.instagram.com/trousers",
+        "followingSince": new Date("2022-05-13T02:28:54.992Z")
+      }
+    ]
+  }
 ];

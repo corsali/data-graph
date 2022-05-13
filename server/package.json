@@ -6,7 +6,7 @@
     "vercel:install": "npm-install-if-needed",
     "gen:gql": "graphql-codegen generate",
     "gen:data": "ts-node ./scripts/gen-mocks.ts",
-    "gen:data:clean": "rimraf ./api/**/data.ts && npm run gen:data",
+    "gen:data:clean": "rimraf ./domain/**/data.ts && npm run gen:data",
     "build": "webpack",
     "start": "concurrently -k npm:start:*",
     "start:rest": "nodemon --ext ts --watch shared --watch api/rest --exec 'npm run node -- api/rest/index.ts'",

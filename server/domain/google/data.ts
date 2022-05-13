@@ -1,99 +1,99 @@
 /* eslint-disable */
 // @ts-nocheck
 import { DbGoogle } from "./types";
-
+    
 export const mockGoogleData: DbGoogle[] = [
   {
-    userId: "7f3d4ead-0c4a-4ed5-9656-30f914019833",
-    locationHistory: [
+    "userId": "a30b212f-3bab-440b-9c18-ea8a0032038d",
+    "locationHistory": [
       {
-        latitude: 421552442,
-        longitude: 278504101,
-        timestamp: new Date("2022-05-04T01:41:47.284Z"),
-      },
+        "latitude": 793845377,
+        "longitude": 324133878,
+        "timestamp": new Date("2022-05-12T15:10:28.498Z")
+      }
     ],
-    search: [
+    "search": [
       {
-        timestamp: new Date("2022-05-03T22:59:28.049Z"),
-        title: "Gmail - Google",
-        type: "VISIT",
-        url: "https://www.google.com/gmail/",
+        "timestamp": new Date("2022-05-13T08:21:04.125Z"),
+        "title": "Gmail - Google",
+        "type": "VISIT",
+        "url": "https://www.google.com/gmail/"
       },
       {
-        title: "double",
-        type: "SEARCH",
-        url: "https://www.google.com/search?q=double",
-        timestamp: new Date("2022-05-03T12:37:51.160Z"),
+        "title": "sultan",
+        "type": "SEARCH",
+        "url": "https://www.google.com/search?q=sultan",
+        "timestamp": new Date("2022-05-12T23:44:41.752Z")
       },
       {
-        title: "piercing",
-        type: "SEARCH",
-        url: "https://www.google.com/search?q=piercing",
-        timestamp: new Date("2022-05-04T09:48:08.794Z"),
-      },
+        "title": "difficult",
+        "type": "SEARCH",
+        "url": "https://www.google.com/search?q=difficult",
+        "timestamp": new Date("2022-05-12T19:36:34.040Z")
+      }
     ],
-    calendar: "Coming soon",
+    "calendar": "Coming soon"
   },
   {
-    userId: "ffe449ec-1571-4ce3-bda3-9bcc65e12c8a",
-    locationHistory: [
+    "userId": "17e6b53e-adcc-478b-a489-da57d9d61818",
+    "locationHistory": [
       {
-        latitude: 15461499,
-        longitude: 976467023,
-        timestamp: new Date("2022-05-03T15:00:27.171Z"),
-      },
+        "latitude": -424733057,
+        "longitude": 127170187,
+        "timestamp": new Date("2022-05-13T09:01:12.708Z")
+      }
     ],
-    search: [
+    "search": [
       {
-        timestamp: new Date("2022-05-04T09:20:49.425Z"),
-        title: "Gmail - Google",
-        type: "VISIT",
-        url: "https://www.google.com/gmail/",
+        "timestamp": new Date("2022-05-13T04:07:48.531Z"),
+        "title": "Gmail - Google",
+        "type": "VISIT",
+        "url": "https://www.google.com/gmail/"
       },
       {
-        title: "sea",
-        type: "SEARCH",
-        url: "https://www.google.com/search?q=sea",
-        timestamp: new Date("2022-05-03T23:48:16.326Z"),
+        "title": "flatboat",
+        "type": "SEARCH",
+        "url": "https://www.google.com/search?q=flatboat",
+        "timestamp": new Date("2022-05-13T02:00:28.532Z")
       },
       {
-        title: "informal",
-        type: "SEARCH",
-        url: "https://www.google.com/search?q=informal",
-        timestamp: new Date("2022-05-03T12:22:46.187Z"),
-      },
+        "title": "icky",
+        "type": "SEARCH",
+        "url": "https://www.google.com/search?q=icky",
+        "timestamp": new Date("2022-05-12T16:57:06.596Z")
+      }
     ],
-    calendar: "Coming soon",
+    "calendar": "Coming soon"
   },
   {
-    userId: "f49e6295-b93e-4f21-b2a9-523ff8d4a068",
-    locationHistory: [
+    "userId": "1c3ae499-ae97-4d01-a9b0-a03dd7ef8585",
+    "locationHistory": [
       {
-        latitude: 136817907,
-        longitude: 259463639,
-        timestamp: new Date("2022-05-03T21:06:11.710Z"),
-      },
+        "latitude": 654057254,
+        "longitude": 587755476,
+        "timestamp": new Date("2022-05-13T09:40:27.912Z")
+      }
     ],
-    search: [
+    "search": [
       {
-        timestamp: new Date("2022-05-03T21:54:54.395Z"),
-        title: "Gmail - Google",
-        type: "VISIT",
-        url: "https://www.google.com/gmail/",
+        "timestamp": new Date("2022-05-13T00:13:59.034Z"),
+        "title": "Gmail - Google",
+        "type": "VISIT",
+        "url": "https://www.google.com/gmail/"
       },
       {
-        title: "ethernet",
-        type: "SEARCH",
-        url: "https://www.google.com/search?q=ethernet",
-        timestamp: new Date("2022-05-04T00:12:24.513Z"),
+        "title": "research",
+        "type": "SEARCH",
+        "url": "https://www.google.com/search?q=research",
+        "timestamp": new Date("2022-05-12T20:25:01.104Z")
       },
       {
-        title: "popular",
-        type: "SEARCH",
-        url: "https://www.google.com/search?q=popular",
-        timestamp: new Date("2022-05-04T02:44:44.904Z"),
-      },
+        "title": "dizzy",
+        "type": "SEARCH",
+        "url": "https://www.google.com/search?q=dizzy",
+        "timestamp": new Date("2022-05-12T19:57:04.139Z")
+      }
     ],
-    calendar: "Coming soon",
-  },
+    "calendar": "Coming soon"
+  }
 ];

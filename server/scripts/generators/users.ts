@@ -1,4 +1,4 @@
-import { DbUser } from "../../api/core/types";
+import { DbUser } from "../../domain/core/types";
 import { uuid } from "../../shared";
 
 export const generateUsers = (): DbUser[] =>

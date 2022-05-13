@@ -1,12 +1,45 @@
 import faker from "@faker-js/faker";
-import { DbInstagram } from "../../api/instagram/types";
+import { DbInstagram } from "../../domain/instagram/types";
 
 export const generateInstagram = (
   users: Array<{ id: string }>
 ): DbInstagram[] =>
-  users.map(({ id }) => {
+  users.map<DbInstagram>(({ id }) => {
     return {
       userId: id,
+      adsAndBusinesses: {
+        advertisersUsingYourActivityOrInformation: [...new Array(3)]
+          .fill(0)
+          .map(() => ({
+            basedOnUploadedList: true,
+            basedOnYourInteractions: faker.datatype.boolean(),
+            name: faker.word.noun(),
+          })),
+      },
+      adsAndTopics: {
+        adsViewed: [...new Array(3)].fill(0).map(() => ({
+          author: faker.word.noun(),
+          viewedOn: faker.date.recent(),
+        })),
+        postsViewed: [...new Array(3)].fill(0).map(() => ({
+          author: faker.word.noun(),
+          viewedOn: faker.date.recent(),
+        })),
+      },
+      informationAboutYou: {
+        accountBasedIn: {
+          inferredDataPrimaryLocation: "Jacksonville, Florida",
+        },
+      },
+      yourTopics: {
+        yourReelsSentiments: ["Adorable", "Exciting", "Emotional"],
+        yourReelsTopics: ["Trick Stunts", "Fandom", "Outdoor Nature"],
+        yourTopics: [
+          "Trick Stunts",
+          "Video Games",
+          "Vacation & Leisure Activities",
+        ],
+      },
       followersAndFollowing: [
         {
           name: "Instagram",
