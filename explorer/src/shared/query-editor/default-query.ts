@@ -34,33 +34,6 @@ query AvailableData {
       }
     }
     instagram {
-      yourTopics { 
-        yourTopics 
-        yourReelsTopics
-        yourReelsSentiments
-      }
-      informationAboutYou {
-        accountBasedIn {
-          inferredDataPrimaryLocation
-        }
-      }
-      adsAndBusinesses {
-        advertisersUsingYourActivityOrInformation {
-          name
-          basedOnUploadedList
-          basedOnYourInteractions
-        }
-      }
-      adsAndTopics {
-        adsViewed {
-          viewedOn
-          author
-        }
-        postsViewed {
-          viewedOn
-          author
-        }
-      }
       followersAndFollowing {
         name
         followingSince
@@ -90,3 +63,32 @@ query AvailableData {
   }
 }
 `;
+
+// Not working due to deploy issue, to be copied back to instagram
+// yourTopics { 
+//   yourTopics 
+//   yourReelsTopics
+//   yourReelsSentiments
+// }
+// informationAboutYou {
+//   accountBasedIn {
+//     inferredDataPrimaryLocation
+//   }
+// }
+// adsAndBusinesses {
+//   advertisersUsingYourActivityOrInformation {
+//     name
+//     basedOnUploadedList
+//     basedOnYourInteractions
+//   }
+// }
+// adsAndTopics {
+//   adsViewed {
+//     viewedOn
+//     author
+//   }
+//   postsViewed {
+//     viewedOn
+//     author
+//   }
+// }
