@@ -23,5 +23,5 @@ const server = new ApolloServer({
 });
 
 server.listen({ port: localGatewayPort }).then(({ url }: any) => {
-  console.log(`Gateway is now ready at ${url}`);
+  console.log(`Gateway now ready at ${url}`);
 });
