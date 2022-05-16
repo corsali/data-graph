@@ -43,18 +43,110 @@ type FacebookPost {
   postedOn: Date!
 }
 
+type FacebookPrimaryPublicLocation {
+  city: String!
+  region: String!
+  country: String!
+}
+
+type FacebookLastLocationCoordinate {
+  latitude: Float!
+  longitude: Float!
+}
+
+type FacebookLastLocation {
+  time: Date!
+  coordinate: FacebookLastLocationCoordinate!
+}
+
+type FacebookDeviceLocation {
+  spn: String!
+  countryCode: String!
+}
+
+type FacebookLocation {
+  timezone: String
+  primaryPublicLocation: FacebookPrimaryPublicLocation
+  lastLocation: FacebookLastLocation
+  deviceLocation: FacebookDeviceLocation
+}
+
+type FacebookAdvertiser {
+  advertiserName: String!
+  hasDataFileCustomAudience: Boolean!
+  hasMarketingCustomAudience: Boolean!
+  hasInPersonStoreVisit: Boolean!
+}
+
+type FacebookAdInteraction {
+  date: Date!
+  action: String!
+  title: String!
+}
+
+type FacebookAdsInformation {
+  advertsInteractedWith: [FacebookAdInteraction!]
+}
+
+type OffFacebookApp {
+  name: String!
+  dateAdded: Date
+  userAppScopedId: String!
+  category: String!
+  dateRemoved: Date
+}
+
+type OffFacebookActivityEvent {
+  id: String!
+  type: String!
+  date: Date!
+}
+
+type OffFacebookActivity {
+  name: String!
+  events: [OffFacebookActivityEvent!]!
+}
+
+type AppsAndWebsitesOffOfFacebook {
+  appsAndWebsites: [OffFacebookApp!]
+  offFacebookActivity: [OffFacebookActivity!]
+}
+
+type FacebookNews {
+  locations: [String!]
+}
+
+type OtherLoggedInformation {
+  friendPeerGroup: String
+  adsInterests: [String!]
+}
+
 type Facebook {
-  pages: [FacebookPage]!
-  friendsAndFollowers: [FacebookFriend]!
-  posts: [FacebookPost]
+  pages: [FacebookPage!]
+  friendsAndFollowers: [FacebookFriend!]
+  posts: [FacebookPost!]
+  location: FacebookLocation
+  adsInformation: FacebookAdsInformation
+  appsAndWebsitesOffOfFacebook: AppsAndWebsitesOffOfFacebook
+  facebookNews: FacebookNews
+  otherLoggedInformation: OtherLoggedInformation
 }
 
 # facebook {
+#     facebookNews {
+#         yourTopics
+#     }
 #     your_places
 #     dating {
 #         yourDatingProfile
 #         yourDatingPreferences
 #         yourDatingActivity
+#     }
+#     adsInformation {
+#         informationYouveSubmittedToAdvertisers
+#     }
+#     appsAndWebsitesOffOfFacebook {
+#         postsFromAppsAndWebsites
 #     }
 #     facebookMarketplace {
 #         sellerInformation
@@ -65,30 +157,6 @@ type Facebook {
 #     yourTopics {
 #         yourTopics
 #         topicsYouFollow
-#     }
-#     location {
-#         timezone
-#         primaryPublicLocation
-#         lastLocation
-#         deviceLocation
-#     }
-#     adsInformation {
-#         informationYouveSubmittedToAdvertisers
-#         advertisersYouveInteractedWith
-#         advertisersUsingYourActivityOrInformation
-#     }
-#     appsAndWebsitesOffOfFacebook {
-#         yourOffFacebookActivity
-#         postsFromAppsAndWebsites
-#         appsAndWebsites
-#     }
-#     facebookNews {
-#         yourTopics
-#         yourLocations
-#     }
-#     otherLoggedInformation {
-#         friendPeerGroup
-#         adsInterests
 #     }
 # }
 

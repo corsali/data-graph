@@ -91,9 +91,60 @@ query AvailableData {
 }
 `;
 
+// rest of facebook data 
 
+// location {
+//   timezone
+//   primaryPublicLocation {
+//     city
+//     region
+//     country
+//   }
+//   lastLocation {
+//     time
+//     coordinate {
+//       latitude
+//       longitude
+//     }
+//   }
+//   deviceLocation {
+//     spn
+//     countryCode
+//   }
+// }
+// adsInformation {
+//   advertsInteractedWith {
+//     date
+//     action
+//     title
+//   }
+// }
+// appsAndWebsitesOffOfFacebook {
+//   appsAndWebsites {
+//     name
+//     dateAdded
+//     userAppScopedId
+//     category
+//     dateRemoved
+//   }
+//   offFacebookActivity {
+//     name
+//     events {
+//       id
+//       type
+//       date
+//     }
+//   }
+// }
+// facebookNews {
+//   locations
+// }
+// otherLoggedInformation {
+//   friendPeerGroup
+//   adsInterests
+// }
 
-// missing google fields
+// rest of google fields
 
 // googlePlayStore {
 //   installs {

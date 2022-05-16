@@ -4,53 +4,53 @@ import { DbInstagram } from "./types";
     
 export const mockInstagramData: DbInstagram[] = [
   {
-    "userId": "44e046ab-dfdc-44a9-b018-be892a9d7a2f",
+    "userId": "d2bd435f-2ea2-420a-b23f-c8f10a99990b",
     "adsAndBusinesses": {
       "advertisersUsingYourActivityOrInformation": [
         {
           "basedOnUploadedList": true,
           "basedOnYourInteractions": false,
-          "name": "dwarf"
+          "name": "protein"
         },
         {
           "basedOnUploadedList": true,
           "basedOnYourInteractions": true,
-          "name": "gum"
+          "name": "soldier"
         },
         {
           "basedOnUploadedList": true,
-          "basedOnYourInteractions": false,
-          "name": "flavor"
+          "basedOnYourInteractions": true,
+          "name": "disco"
         }
       ]
     },
     "adsAndTopics": {
       "adsViewed": [
         {
-          "author": "pants",
-          "viewedOn": new Date("2022-05-15T02:34:11.732Z")
+          "author": "comradeship",
+          "viewedOn": new Date("2022-05-16T08:55:50.277Z")
         },
         {
-          "author": "coast",
-          "viewedOn": new Date("2022-05-14T21:24:25.371Z")
+          "author": "expertise",
+          "viewedOn": new Date("2022-05-16T05:39:24.552Z")
         },
         {
-          "author": "salute",
-          "viewedOn": new Date("2022-05-14T20:49:20.296Z")
+          "author": "satisfaction",
+          "viewedOn": new Date("2022-05-15T23:34:17.407Z")
         }
       ],
       "postsViewed": [
         {
-          "author": "store",
-          "viewedOn": new Date("2022-05-15T03:37:51.174Z")
+          "author": "prostanoid",
+          "viewedOn": new Date("2022-05-16T10:31:11.441Z")
         },
         {
-          "author": "louse",
-          "viewedOn": new Date("2022-05-14T22:23:43.143Z")
+          "author": "snowflake",
+          "viewedOn": new Date("2022-05-16T07:56:32.333Z")
         },
         {
-          "author": "battle",
-          "viewedOn": new Date("2022-05-15T10:54:16.401Z")
+          "author": "cornerstone",
+          "viewedOn": new Date("2022-05-15T13:07:42.521Z")
         }
       ]
     },
@@ -80,68 +80,68 @@ export const mockInstagramData: DbInstagram[] = [
       {
         "name": "Instagram",
         "url": "https://www.instagram.com/instagram",
-        "followingSince": new Date("2022-05-15T08:35:50.866Z")
+        "followingSince": new Date("2022-05-16T01:33:23.781Z")
       },
       {
-        "name": "ownership",
-        "url": "https://www.instagram.com/ownership",
-        "followingSince": new Date("2022-05-15T09:03:33.336Z")
+        "name": "shopper",
+        "url": "https://www.instagram.com/shopper",
+        "followingSince": new Date("2022-05-15T20:07:30.267Z")
       },
       {
-        "name": "veteran",
-        "url": "https://www.instagram.com/veteran",
-        "followingSince": new Date("2022-05-15T07:07:43.117Z")
+        "name": "intuition",
+        "url": "https://www.instagram.com/intuition",
+        "followingSince": new Date("2022-05-16T03:20:40.210Z")
       }
     ]
   },
   {
-    "userId": "d90557f3-b002-4901-a093-d6a19b92fdd3",
+    "userId": "20ada47c-eb10-4c5b-b012-1bcfbf380957",
     "adsAndBusinesses": {
       "advertisersUsingYourActivityOrInformation": [
         {
           "basedOnUploadedList": true,
-          "basedOnYourInteractions": false,
-          "name": "solicitor"
+          "basedOnYourInteractions": true,
+          "name": "cage"
         },
         {
           "basedOnUploadedList": true,
           "basedOnYourInteractions": false,
-          "name": "puritan"
+          "name": "insight"
         },
         {
           "basedOnUploadedList": true,
           "basedOnYourInteractions": true,
-          "name": "wastebasket"
+          "name": "galley"
         }
       ]
     },
     "adsAndTopics": {
       "adsViewed": [
         {
-          "author": "apparatus",
-          "viewedOn": new Date("2022-05-14T18:47:39.626Z")
+          "author": "boy",
+          "viewedOn": new Date("2022-05-16T07:16:33.669Z")
         },
         {
-          "author": "compensation",
-          "viewedOn": new Date("2022-05-14T23:31:43.011Z")
+          "author": "pump",
+          "viewedOn": new Date("2022-05-15T17:43:51.273Z")
         },
         {
-          "author": "weight",
-          "viewedOn": new Date("2022-05-15T02:56:12.943Z")
+          "author": "venti",
+          "viewedOn": new Date("2022-05-16T00:52:30.379Z")
         }
       ],
       "postsViewed": [
         {
-          "author": "gastropod",
-          "viewedOn": new Date("2022-05-14T19:48:40.963Z")
+          "author": "slang",
+          "viewedOn": new Date("2022-05-15T23:35:35.287Z")
         },
         {
-          "author": "lycra",
-          "viewedOn": new Date("2022-05-14T18:11:57.286Z")
+          "author": "maple",
+          "viewedOn": new Date("2022-05-16T10:29:29.476Z")
         },
         {
-          "author": "typeface",
-          "viewedOn": new Date("2022-05-15T07:41:30.649Z")
+          "author": "dialogue",
+          "viewedOn": new Date("2022-05-15T20:20:12.220Z")
         }
       ]
     },
@@ -171,68 +171,68 @@ export const mockInstagramData: DbInstagram[] = [
       {
         "name": "Instagram",
         "url": "https://www.instagram.com/instagram",
-        "followingSince": new Date("2022-05-15T06:41:18.701Z")
+        "followingSince": new Date("2022-05-16T05:14:02.477Z")
       },
       {
-        "name": "raven",
-        "url": "https://www.instagram.com/raven",
-        "followingSince": new Date("2022-05-14T21:39:20.136Z")
+        "name": "bowl",
+        "url": "https://www.instagram.com/bowl",
+        "followingSince": new Date("2022-05-16T05:24:29.553Z")
       },
       {
-        "name": "fertilizer",
-        "url": "https://www.instagram.com/fertilizer",
-        "followingSince": new Date("2022-05-14T13:40:18.240Z")
+        "name": "van",
+        "url": "https://www.instagram.com/van",
+        "followingSince": new Date("2022-05-15T11:00:12.794Z")
       }
     ]
   },
   {
-    "userId": "a043a835-fbdc-4e0b-a3fa-a13215cb3eee",
+    "userId": "186e0da6-ba31-4991-85c3-9a0160cb279a",
     "adsAndBusinesses": {
       "advertisersUsingYourActivityOrInformation": [
         {
           "basedOnUploadedList": true,
           "basedOnYourInteractions": false,
-          "name": "hostel"
-        },
-        {
-          "basedOnUploadedList": true,
-          "basedOnYourInteractions": false,
-          "name": "alley"
+          "name": "harbor"
         },
         {
           "basedOnUploadedList": true,
           "basedOnYourInteractions": true,
-          "name": "skullcap"
+          "name": "passport"
+        },
+        {
+          "basedOnUploadedList": true,
+          "basedOnYourInteractions": false,
+          "name": "recipe"
         }
       ]
     },
     "adsAndTopics": {
       "adsViewed": [
         {
-          "author": "tassel",
-          "viewedOn": new Date("2022-05-15T03:09:34.020Z")
+          "author": "wardrobe",
+          "viewedOn": new Date("2022-05-15T14:58:38.700Z")
         },
         {
-          "author": "anarchist",
-          "viewedOn": new Date("2022-05-15T11:18:39.131Z")
+          "author": "drama",
+          "viewedOn": new Date("2022-05-15T13:44:00.931Z")
         },
         {
-          "author": "reset",
-          "viewedOn": new Date("2022-05-14T18:52:03.520Z")
+          "author": "convertible",
+          "viewedOn": new Date("2022-05-15T11:43:41.593Z")
         }
       ],
       "postsViewed": [
         {
-          "author": "refectory",
-          "viewedOn": new Date("2022-05-15T07:46:18.852Z")
+          "author": "horn",
+          "viewedOn": new Date("2022-05-16T02:42:13.096Z")
         },
         {
-          "author": "wafer",
-          "viewedOn": new Date("2022-05-14T14:30:27.817Z")
+          "author": "pentagon",
+          "viewedOn": new Date("2022-05-16T00:40:00.332Z")
         },
         {
-          "author": "format",
-          "viewedOn": new Date("2022-05-14T14:58:50.176Z")
+          "author": "outback",
+          "viewedOn": new Date("2022-05-15T19:36:55.688Z")
         }
       ]
     },
@@ -262,17 +262,17 @@ export const mockInstagramData: DbInstagram[] = [
       {
         "name": "Instagram",
         "url": "https://www.instagram.com/instagram",
-        "followingSince": new Date("2022-05-14T13:36:52.130Z")
+        "followingSince": new Date("2022-05-16T05:37:55.431Z")
       },
       {
-        "name": "carol",
-        "url": "https://www.instagram.com/carol",
-        "followingSince": new Date("2022-05-14T16:03:51.748Z")
+        "name": "reply",
+        "url": "https://www.instagram.com/reply",
+        "followingSince": new Date("2022-05-16T04:54:06.877Z")
       },
       {
-        "name": "mastication",
-        "url": "https://www.instagram.com/mastication",
-        "followingSince": new Date("2022-05-15T06:41:48.892Z")
+        "name": "font",
+        "url": "https://www.instagram.com/font",
+        "followingSince": new Date("2022-05-16T00:42:20.224Z")
       }
     ]
   }
