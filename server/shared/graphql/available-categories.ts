@@ -11,7 +11,9 @@ const facebookKeys: NoTypenameKeysObj<Facebook> = {
 const facebook = Object.keys(facebookKeys) as NoTypenameKeys<Facebook>[];
 
 const googleKeys: NoTypenameKeysObj<Google> = {
-  calendar: true,
+  googlePlayStore: true,
+  maps: true,
+  youtubeAndYoutubeMusic: true,
   locationHistory: true,
   search: true,
 };

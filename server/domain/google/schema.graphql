@@ -1,32 +1,181 @@
 scalar ComingSoon
 scalar Date
 
-type Google {
-  search: [SearchHistoryRecord!]!
-  locationHistory: [LocationHistoryRecord!]!
-  calendar: ComingSoon! @deprecated(reason: "Coming Soon")
+type GooglePlayStoreDoc {
+  documentType: String!
+  title: String!
 }
+
+type GooglePlayStoreInstallDevice {
+  model: String!
+  carrier: String!
+  manufacturer: String!
+  deviceDisplayName: String!
+}
+
+type GooglePlayStoreInstall {
+  firstInstallationTime: Date!
+  lastUpdateTime: Date!
+  doc: GooglePlayStoreDoc!
+  device: GooglePlayStoreInstallDevice!
+}
+
+type GooglePlayStoreLibraryItem {
+  acquisitionTime: Date!
+  doc: GooglePlayStoreDoc!
+}
+
+type GooglePlayStoreReview {
+  creationTime: Date!
+  starRating: Float!
+  comment: String!
+  document: GooglePlayStoreDoc!
+}
+
+type GooglePlayStoreDeviceInfo {
+  carrierName: String!
+  manufacturer: String!
+  modelName: String!
+  deviceName: String!
+  productName: String!
+  retailBrand: String!
+  nativePlatform: [String!]!
+  deviceIpCountry: String!
+  userLocale: String!
+  androidSdkVersion: String!
+  playStoreClientVersion: Int
+  buildFingerprint: String
+  totalMemoryBytes: String
+}
+
+type GooglePlayStoreDevice {
+  deviceRegistrationTime: Date!
+  userAddedOnDeviceTime: Date!
+  lastTimeDeviceActive: Date!
+  mostRecentData: GooglePlayStoreDeviceInfo!
+  dataAtTimeOfUserPlayActivity: GooglePlayStoreDeviceInfo!
+}
+
+type GooglePlayStoreHistoricPurchase {
+  invoicePrice: String!
+  paymentMethodTitle: String!
+  userLanguageCode: String!
+  userCountry: String!
+  purchaseTime: Date!
+  doc: GooglePlayStoreDoc!
+}
+
+type SubscriptionPeriod {
+  unit: String!
+  count: Int!
+}
+
+type GooglePlayStoreSubscriptionPricing {
+  period: SubscriptionPeriod!
+  price: String!
+  repeatedPricing: Boolean!
+}
+
+type GooglePlayStoreSubscription {
+  period: SubscriptionPeriod!
+  price: String!
+  doc: GooglePlayStoreDoc!
+  renewalDate: Date!
+  pricing: [GooglePlayStoreSubscriptionPricing!]!
+  state: String!
+}
+
+type GooglePlayStore {
+  installs: [GooglePlayStoreInstall!]
+  library: [GooglePlayStoreLibraryItem!]
+  purchaseHistory: [GooglePlayStoreHistoricPurchase!]
+  reviews: [GooglePlayStoreReview!]
+  devices: [GooglePlayStoreDevice!]
+  subscriptions: [GooglePlayStoreSubscription!]
+}
+
+interface YoutubeSearchBase {
+  url: String!
+  queriedAt: Date!
+  service: String!
+}
+
+type YoutubeRegularSearch implements YoutubeSearchBase {
+  url: String!
+  queriedAt: Date!
+  service: String!
+  searchedFor: String!
+}
+
+type YoutubeImplicitSearch implements YoutubeSearchBase {
+  url: String!
+  queriedAt: Date!
+  service: String!
+  watched: String
+  details: String
+}
+
+union YoutubeSearch = YoutubeRegularSearch | YoutubeImplicitSearch
+
+interface YoutubeViewBase {
+  service: String!
+  date: Date!
+}
+
+type YoutubeWatched implements YoutubeViewBase {
+  service: String!
+  date: Date!
+  watched: String!
+  url: String!
+  channelUrl: String!
+}
+
+type YoutubeMusicVisit implements YoutubeViewBase {
+  service: String!
+  date: Date!
+  action: String
+}
+
+union YoutubeView = YoutubeWatched | YoutubeMusicVisit
+
+type YoutubeSubscription {
+  channelId: String!
+  channelUrl: String!
+  channelTitle: String!
+}
+
+type YoutubePlaylist {
+  playlistId: String!
+  channelId: String!
+  title: String!
+  description: String
+  visibility: String!
+  createdAt: Date
+  updatedAt: Date
+}
+
+type YoutubeAndYoutubeMusic {
+  watchHistory: [YoutubeView!]
+  searchHistory: [YoutubeSearch!]
+  subscriptions: [YoutubeSubscription!]
+  playlists: [YoutubePlaylist!]
+}
+
+type GoogleMapStarredPlace {
+  mapsUrl: String!
+  latitude: Int!
+  longitude: Int!
+  publishedAt: Date!
+  updatedAt: Date!
+  title: String!
+}
+
+type GoogleMaps {
+  starredPlaces: [GoogleMapStarredPlace!]
+}
+
+# no data to describe the following
 # google {
-#     googlePlayStore {
-#         installs
-#         library
-#         promotionHistory
-#         purchaseHistory
-#         reviews
-#         devices
-#         subscriptions
-#     }
-#     youtubeAndYoutubeMusic {
-#         history {
-#             watchHistory
-#             searchHistory
-#         }
-#         subscriptions
-#         playlists
-#     }
-#     maps {
-#         myLabeledPlaces
-#     }
 #     chrome {
 #         browserHistory
 #         searchEngines
@@ -55,8 +204,15 @@ type LocationHistoryRecord {
   timestamp: Date!
 }
 
+type Google {
+  search: [SearchHistoryRecord!]!
+  locationHistory: [LocationHistoryRecord!]!
+  googlePlayStore: GooglePlayStore!
+  youtubeAndYoutubeMusic: YoutubeAndYoutubeMusic!
+  maps: GoogleMaps!
+}
+
 extend type User @key(fields: "id") {
   id: ID!
   google: Google
 }
-
