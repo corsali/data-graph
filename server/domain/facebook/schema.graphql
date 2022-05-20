@@ -18,6 +18,7 @@ type FacebookPhotoMetadata {
   cameraMake: String
   cameraModel: String
   takenAt: Date
+  uploadIp: String
 }
 
 type FacebookRecordingMetadata {
@@ -49,14 +50,14 @@ type FacebookPrimaryPublicLocation {
   country: String!
 }
 
-type FacebookLastLocationCoordinate {
+type FacebookLocationCoordinate {
   latitude: Float!
   longitude: Float!
 }
 
 type FacebookLastLocation {
   time: Date!
-  coordinate: FacebookLastLocationCoordinate!
+  coordinate: FacebookLocationCoordinate!
 }
 
 type FacebookDeviceLocation {
@@ -84,8 +85,15 @@ type FacebookAdInteraction {
   title: String!
 }
 
+type InformationSubmittedToAdvertisers {
+  label: String!
+  value: String!
+}
+
 type FacebookAdsInformation {
   advertsInteractedWith: [FacebookAdInteraction!]
+  informationYouveSubmittedToAdvertisers: [InformationSubmittedToAdvertisers!]
+  advertisersUsingYourActivityOrInformation: [FacebookAdvertiser!]
 }
 
 type OffFacebookApp {
@@ -94,6 +102,17 @@ type OffFacebookApp {
   userAppScopedId: String!
   category: String!
   dateRemoved: Date
+}
+
+type OffFacebookAppPostAttachment {
+  name: String!
+  url: String!
+}
+
+type OffFacebookAppPost {
+  datePosted: Date!
+  title: String!
+  attachments: [OffFacebookAppPostAttachment!]
 }
 
 type OffFacebookActivityEvent {
@@ -109,6 +128,7 @@ type OffFacebookActivity {
 
 type AppsAndWebsitesOffOfFacebook {
   appsAndWebsites: [OffFacebookApp!]
+  postsFromAppsAndWebsites: [OffFacebookAppPost!]
   offFacebookActivity: [OffFacebookActivity!]
 }
 
@@ -121,6 +141,86 @@ type OtherLoggedInformation {
   adsInterests: [String!]
 }
 
+type FacebookMarketplaceRating {
+  date: Date!
+  title: String!
+  offerText: String!
+}
+
+type FacebookMarketplaceOffer {
+  title: String!
+  description: String!
+  price: String!
+  seller: String!
+  category: String!
+  marketplace: String!
+  createdOn: Date!
+  updatedOn: Date!
+  location: FacebookLocationCoordinate!
+}
+
+type FacebookMarketplace {
+  buyerAndSellerRatings: [FacebookMarketplaceRating!]
+  itemsSold: [FacebookMarketplaceOffer!]
+}
+
+type FacebookTopics {
+  yourTopics: [String!]
+}
+
+type DateRange {
+  start: Date!
+  end: Date!
+}
+
+type FacebookDatingActivity {
+  recentlyActiveDateRange: DateRange!
+  complimentsSent: [String!]
+  likedCount: Int!
+  passedCount: Int!
+  smiledCount: Int!
+}
+
+type FacebookDatingPreferences {
+  minAge: Int!
+  maxAge: Int!
+  children: String!
+  distance: Int!
+  gender: [String!]
+  religiousViews: [String!]
+}
+
+type FacebookPhoto {
+  uri: String!
+  createdAt: Date!
+  metadata: FacebookPhotoMetadata
+}
+
+type FacebookDatingProfile {
+  additionalLocations: [String!]
+  college: [String!]
+  children: String!
+  currentCity: String!
+  company: [String!]
+  gender: [String!]
+  profileQuestions: [String!]
+  gradSchool: [String!]
+  highSchool: [String!]
+  hobbies: [String!]
+  hometown: String!
+  height: Int!
+  jobTitle: [String!]
+  religiousViews: [String!]
+  photos: [FacebookPhoto!]
+  profilePicture: FacebookPhoto
+}
+
+type FacebookDating {
+  yourDatingActivity: FacebookDatingActivity
+  yourDatingProfile: FacebookDatingProfile
+  yourDatingPreferences: FacebookDatingPreferences
+}
+
 type Facebook {
   pages: [FacebookPage!]
   friendsAndFollowers: [FacebookFriend!]
@@ -130,34 +230,24 @@ type Facebook {
   appsAndWebsitesOffOfFacebook: AppsAndWebsitesOffOfFacebook
   facebookNews: FacebookNews
   otherLoggedInformation: OtherLoggedInformation
+  facebookMarketplace: FacebookMarketplace
+  yourTopics: FacebookTopics
+  dating: FacebookDating
 }
 
+# No schema source available
 # facebook {
+#     yourTopics {
+#         topicsYouFollow
+#     }
 #     facebookNews {
 #         yourTopics
-#     }
-#     your_places
-#     dating {
-#         yourDatingProfile
-#         yourDatingPreferences
-#         yourDatingActivity
-#     }
-#     adsInformation {
-#         informationYouveSubmittedToAdvertisers
-#     }
-#     appsAndWebsitesOffOfFacebook {
-#         postsFromAppsAndWebsites
 #     }
 #     facebookMarketplace {
 #         sellerInformation
 #         marketplaceNotifications
-#         itemsSold
-#         buyerAndSellerRatings
 #     }
-#     yourTopics {
-#         yourTopics
-#         topicsYouFollow
-#     }
+#     your_places
 # }
 
 extend type User @key(fields: "id") {

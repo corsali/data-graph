@@ -18,6 +18,7 @@ type InstagramAccountBasedIn {
 
 type InstagramInformationAboutUser {
   accountBasedIn: InstagramAccountBasedIn
+  adsInterests: [String!]
 }
 
 type InstagramAdvertiserUsingYourActivityOrInformation {

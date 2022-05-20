@@ -30,6 +30,12 @@ export const generateInstagram = (
         accountBasedIn: {
           inferredDataPrimaryLocation: "Jacksonville, Florida",
         },
+        adsInterests: [
+          "Investment",
+          "Physical fitness",
+          "Real estate",
+          "Clothing",
+        ],
       },
       yourTopics: {
         yourReelsSentiments: ["Adorable", "Exciting", "Emotional"],

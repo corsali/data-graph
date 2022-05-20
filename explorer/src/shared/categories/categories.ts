@@ -11,6 +11,7 @@ export const categories = {
     "BugBounty",
     "CommentsAndReactions",
     "Communities",
+    "Dating",
     "Events",
     "FacebookAccountsCenter",
     "FacebookAssistant",

@@ -4,32 +4,32 @@ import { DbNetflix } from "./types";
     
 export const mockNetflixData: DbNetflix[] = [
   {
-    "userId": "d2bd435f-2ea2-420a-b23f-c8f10a99990b",
+    "userId": "00a51c61-0d30-44b0-9508-91c171bed3ef",
     "history": [
       {
         "cover": "https://www.themoviedb.org/t/p/w94_and_h141_bestv2/9wSbe4CwObACCQvaUVhWQyLR5Vz.jpg",
         "title": "Home Alone",
-        "watchedOn": new Date("2021-08-24T13:05:34.777Z")
+        "watchedOn": new Date("2021-07-06T07:48:26.517Z")
       }
     ]
   },
   {
-    "userId": "20ada47c-eb10-4c5b-b012-1bcfbf380957",
+    "userId": "c00e6345-cf68-4945-a12a-ddda34591395",
     "history": [
       {
         "cover": "https://www.themoviedb.org/t/p/w94_and_h141_bestv2/9wSbe4CwObACCQvaUVhWQyLR5Vz.jpg",
         "title": "Home Alone",
-        "watchedOn": new Date("2021-12-07T02:25:50.810Z")
+        "watchedOn": new Date("2022-02-06T15:53:28.371Z")
       }
     ]
   },
   {
-    "userId": "186e0da6-ba31-4991-85c3-9a0160cb279a",
+    "userId": "89207423-d538-4d66-9e91-2340dff852c1",
     "history": [
       {
         "cover": "https://www.themoviedb.org/t/p/w94_and_h141_bestv2/9wSbe4CwObACCQvaUVhWQyLR5Vz.jpg",
         "title": "Home Alone",
-        "watchedOn": new Date("2021-11-19T01:29:14.538Z")
+        "watchedOn": new Date("2022-03-01T22:37:25.352Z")
       }
     ]
   }

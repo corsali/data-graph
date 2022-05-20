@@ -4,60 +4,66 @@ import { DbInstagram } from "./types";
     
 export const mockInstagramData: DbInstagram[] = [
   {
-    "userId": "d2bd435f-2ea2-420a-b23f-c8f10a99990b",
+    "userId": "00a51c61-0d30-44b0-9508-91c171bed3ef",
     "adsAndBusinesses": {
       "advertisersUsingYourActivityOrInformation": [
         {
           "basedOnUploadedList": true,
+          "basedOnYourInteractions": true,
+          "name": "cemetery"
+        },
+        {
+          "basedOnUploadedList": true,
           "basedOnYourInteractions": false,
-          "name": "protein"
+          "name": "still"
         },
         {
           "basedOnUploadedList": true,
           "basedOnYourInteractions": true,
-          "name": "soldier"
-        },
-        {
-          "basedOnUploadedList": true,
-          "basedOnYourInteractions": true,
-          "name": "disco"
+          "name": "trait"
         }
       ]
     },
     "adsAndTopics": {
       "adsViewed": [
         {
-          "author": "comradeship",
-          "viewedOn": new Date("2022-05-16T08:55:50.277Z")
+          "author": "charger",
+          "viewedOn": new Date("2022-05-19T23:43:38.261Z")
         },
         {
-          "author": "expertise",
-          "viewedOn": new Date("2022-05-16T05:39:24.552Z")
+          "author": "auction",
+          "viewedOn": new Date("2022-05-19T19:42:48.094Z")
         },
         {
-          "author": "satisfaction",
-          "viewedOn": new Date("2022-05-15T23:34:17.407Z")
+          "author": "riding",
+          "viewedOn": new Date("2022-05-19T19:12:32.889Z")
         }
       ],
       "postsViewed": [
         {
-          "author": "prostanoid",
-          "viewedOn": new Date("2022-05-16T10:31:11.441Z")
+          "author": "somersault",
+          "viewedOn": new Date("2022-05-20T03:20:05.311Z")
         },
         {
-          "author": "snowflake",
-          "viewedOn": new Date("2022-05-16T07:56:32.333Z")
+          "author": "bronchitis",
+          "viewedOn": new Date("2022-05-19T21:27:27.019Z")
         },
         {
-          "author": "cornerstone",
-          "viewedOn": new Date("2022-05-15T13:07:42.521Z")
+          "author": "feed",
+          "viewedOn": new Date("2022-05-19T21:13:14.567Z")
         }
       ]
     },
     "informationAboutYou": {
       "accountBasedIn": {
         "inferredDataPrimaryLocation": "Jacksonville, Florida"
-      }
+      },
+      "adsInterests": [
+        "Investment",
+        "Physical fitness",
+        "Real estate",
+        "Clothing"
+      ]
     },
     "yourTopics": {
       "yourReelsSentiments": [
@@ -80,75 +86,81 @@ export const mockInstagramData: DbInstagram[] = [
       {
         "name": "Instagram",
         "url": "https://www.instagram.com/instagram",
-        "followingSince": new Date("2022-05-16T01:33:23.781Z")
+        "followingSince": new Date("2022-05-19T19:09:30.746Z")
       },
       {
-        "name": "shopper",
-        "url": "https://www.instagram.com/shopper",
-        "followingSince": new Date("2022-05-15T20:07:30.267Z")
+        "name": "nightgown",
+        "url": "https://www.instagram.com/nightgown",
+        "followingSince": new Date("2022-05-19T19:17:42.468Z")
       },
       {
-        "name": "intuition",
-        "url": "https://www.instagram.com/intuition",
-        "followingSince": new Date("2022-05-16T03:20:40.210Z")
+        "name": "luncheonette",
+        "url": "https://www.instagram.com/luncheonette",
+        "followingSince": new Date("2022-05-19T21:12:28.482Z")
       }
     ]
   },
   {
-    "userId": "20ada47c-eb10-4c5b-b012-1bcfbf380957",
+    "userId": "c00e6345-cf68-4945-a12a-ddda34591395",
     "adsAndBusinesses": {
       "advertisersUsingYourActivityOrInformation": [
         {
           "basedOnUploadedList": true,
-          "basedOnYourInteractions": true,
-          "name": "cage"
-        },
-        {
-          "basedOnUploadedList": true,
           "basedOnYourInteractions": false,
-          "name": "insight"
+          "name": "community"
         },
         {
           "basedOnUploadedList": true,
           "basedOnYourInteractions": true,
-          "name": "galley"
+          "name": "surge"
+        },
+        {
+          "basedOnUploadedList": true,
+          "basedOnYourInteractions": true,
+          "name": "transition"
         }
       ]
     },
     "adsAndTopics": {
       "adsViewed": [
         {
-          "author": "boy",
-          "viewedOn": new Date("2022-05-16T07:16:33.669Z")
+          "author": "underpants",
+          "viewedOn": new Date("2022-05-20T11:08:56.046Z")
         },
         {
-          "author": "pump",
-          "viewedOn": new Date("2022-05-15T17:43:51.273Z")
+          "author": "cheetah",
+          "viewedOn": new Date("2022-05-20T08:34:27.503Z")
         },
         {
-          "author": "venti",
-          "viewedOn": new Date("2022-05-16T00:52:30.379Z")
+          "author": "solicitation",
+          "viewedOn": new Date("2022-05-19T19:18:15.088Z")
         }
       ],
       "postsViewed": [
         {
-          "author": "slang",
-          "viewedOn": new Date("2022-05-15T23:35:35.287Z")
+          "author": "tender",
+          "viewedOn": new Date("2022-05-20T04:53:39.548Z")
         },
         {
-          "author": "maple",
-          "viewedOn": new Date("2022-05-16T10:29:29.476Z")
+          "author": "silo",
+          "viewedOn": new Date("2022-05-20T00:27:24.325Z")
         },
         {
-          "author": "dialogue",
-          "viewedOn": new Date("2022-05-15T20:20:12.220Z")
+          "author": "employment",
+          "viewedOn": new Date("2022-05-20T02:05:03.613Z")
         }
       ]
     },
     "informationAboutYou": {
       "accountBasedIn": {
         "inferredDataPrimaryLocation": "Jacksonville, Florida"
-      }
+      },
+      "adsInterests": [
+        "Investment",
+        "Physical fitness",
+        "Real estate",
+        "Clothing"
+      ]
     },
     "yourTopics": {
       "yourReelsSentiments": [
@@ -171,75 +183,81 @@ export const mockInstagramData: DbInstagram[] = [
       {
         "name": "Instagram",
         "url": "https://www.instagram.com/instagram",
-        "followingSince": new Date("2022-05-16T05:14:02.477Z")
+        "followingSince": new Date("2022-05-19T14:01:12.656Z")
       },
       {
-        "name": "bowl",
-        "url": "https://www.instagram.com/bowl",
-        "followingSince": new Date("2022-05-16T05:24:29.553Z")
+        "name": "component",
+        "url": "https://www.instagram.com/component",
+        "followingSince": new Date("2022-05-19T14:30:09.190Z")
       },
       {
-        "name": "van",
-        "url": "https://www.instagram.com/van",
-        "followingSince": new Date("2022-05-15T11:00:12.794Z")
+        "name": "prune",
+        "url": "https://www.instagram.com/prune",
+        "followingSince": new Date("2022-05-20T00:42:38.915Z")
       }
     ]
   },
   {
-    "userId": "186e0da6-ba31-4991-85c3-9a0160cb279a",
+    "userId": "89207423-d538-4d66-9e91-2340dff852c1",
     "adsAndBusinesses": {
       "advertisersUsingYourActivityOrInformation": [
         {
           "basedOnUploadedList": true,
           "basedOnYourInteractions": false,
-          "name": "harbor"
+          "name": "empowerment"
         },
         {
           "basedOnUploadedList": true,
           "basedOnYourInteractions": true,
-          "name": "passport"
+          "name": "grass"
         },
         {
           "basedOnUploadedList": true,
-          "basedOnYourInteractions": false,
-          "name": "recipe"
+          "basedOnYourInteractions": true,
+          "name": "city"
         }
       ]
     },
     "adsAndTopics": {
       "adsViewed": [
         {
-          "author": "wardrobe",
-          "viewedOn": new Date("2022-05-15T14:58:38.700Z")
+          "author": "prairie",
+          "viewedOn": new Date("2022-05-20T06:29:32.174Z")
         },
         {
-          "author": "drama",
-          "viewedOn": new Date("2022-05-15T13:44:00.931Z")
+          "author": "diagnosis",
+          "viewedOn": new Date("2022-05-19T13:30:31.735Z")
         },
         {
-          "author": "convertible",
-          "viewedOn": new Date("2022-05-15T11:43:41.593Z")
+          "author": "flick",
+          "viewedOn": new Date("2022-05-19T20:10:20.566Z")
         }
       ],
       "postsViewed": [
         {
-          "author": "horn",
-          "viewedOn": new Date("2022-05-16T02:42:13.096Z")
+          "author": "step-sister",
+          "viewedOn": new Date("2022-05-19T16:49:34.943Z")
         },
         {
-          "author": "pentagon",
-          "viewedOn": new Date("2022-05-16T00:40:00.332Z")
+          "author": "fairy",
+          "viewedOn": new Date("2022-05-20T11:09:40.905Z")
         },
         {
-          "author": "outback",
-          "viewedOn": new Date("2022-05-15T19:36:55.688Z")
+          "author": "hate",
+          "viewedOn": new Date("2022-05-20T05:13:22.679Z")
         }
       ]
     },
     "informationAboutYou": {
       "accountBasedIn": {
         "inferredDataPrimaryLocation": "Jacksonville, Florida"
-      }
+      },
+      "adsInterests": [
+        "Investment",
+        "Physical fitness",
+        "Real estate",
+        "Clothing"
+      ]
     },
     "yourTopics": {
       "yourReelsSentiments": [
@@ -262,17 +280,17 @@ export const mockInstagramData: DbInstagram[] = [
       {
         "name": "Instagram",
         "url": "https://www.instagram.com/instagram",
-        "followingSince": new Date("2022-05-16T05:37:55.431Z")
+        "followingSince": new Date("2022-05-20T06:49:36.287Z")
       },
       {
-        "name": "reply",
-        "url": "https://www.instagram.com/reply",
-        "followingSince": new Date("2022-05-16T04:54:06.877Z")
+        "name": "example",
+        "url": "https://www.instagram.com/example",
+        "followingSince": new Date("2022-05-19T14:14:28.175Z")
       },
       {
-        "name": "font",
-        "url": "https://www.instagram.com/font",
-        "followingSince": new Date("2022-05-16T00:42:20.224Z")
+        "name": "shoe-horn",
+        "url": "https://www.instagram.com/shoe-horn",
+        "followingSince": new Date("2022-05-19T13:36:19.777Z")
       }
     ]
   }

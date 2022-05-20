@@ -48,6 +48,7 @@ query AvailableData {
         accountBasedIn {
           inferredDataPrimaryLocation
         }
+        adsInterests
       }
       adsAndBusinesses {
         advertisersUsingYourActivityOrInformation {
@@ -93,6 +94,86 @@ query AvailableData {
 
 // rest of facebook data 
 
+// facebookMarketplace {
+//   buyerAndSellerRatings {
+//     date
+//     title
+//     offerText
+//   }
+//   itemsSold {
+//     title
+//     description
+//     price
+//     seller
+//     category
+//     marketplace
+//     createdOn
+//     updatedOn
+//     location {
+//       latitude
+//       longitude
+//     }
+//   }
+// }
+// yourTopics {
+//   yourTopics
+// }
+// dating {
+//   yourDatingActivity {
+//     recentlyActiveDateRange {
+//       start
+//       end
+//     }
+//     complimentsSent
+//     likedCount
+//     passedCount
+//     smiledCount
+//   }
+//   yourDatingProfile {
+//     additionalLocations
+//     college
+//     children
+//     currentCity
+//     company
+//     gender
+//     profileQuestions
+//     gradSchool
+//     highSchool
+//     hobbies
+//     hometown
+//     height
+//     jobTitle
+//     religiousViews
+//     photos {
+//       uri
+//       createdAt
+//       metadata {
+//         cameraMake
+//         cameraModel
+//         takenAt
+//         uploadIp
+//       }
+//     }
+//     profilePicture {
+//       uri
+//       createdAt
+//       metadata {
+//         cameraMake
+//         cameraModel
+//         takenAt
+//         uploadIp
+//       }
+//     }
+//   }
+//   yourDatingPreferences {
+//     minAge
+//     maxAge
+//     children
+//     distance
+//     gender
+//     religiousViews
+//   }
+// }
 // location {
 //   timezone
 //   primaryPublicLocation {

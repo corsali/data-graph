@@ -8,7 +8,110 @@ export const generateFacebook = (users: Array<{ id: string }>): DbFacebook[] =>
 
     return {
       userId: id,
+      dating: {
+        yourDatingActivity: {
+          likedCount: 10,
+          passedCount: 54,
+          recentlyActiveDateRange: {
+            start: faker.date.recent(),
+            end: faker.date.recent(),
+          },
+          smiledCount: 0,
+          complimentsSent: [],
+        },
+        yourDatingPreferences: {
+          children: "unspecified",
+          distance: 80,
+          maxAge: 32,
+          minAge: 24,
+          gender: ["woman"],
+          religiousViews: ["unspecified"],
+        },
+        yourDatingProfile: {
+          children: "Doesn't have kids",
+          currentCity: "Miami, Florida",
+          height: 182,
+          hometown: "Miami, Florida",
+          additionalLocations: [],
+          college: ["University of Miami"],
+          company: ["Walmart"],
+          gender: ["man"],
+          gradSchool: [],
+          highSchool: ["Miami Edison Senior High School"],
+          hobbies: ["table tennis"],
+          jobTitle: ["Associate Manager"],
+          photos: [
+            {
+              createdAt: faker.date.recent(),
+              uri: "posts/media/LatestAlbum_qqdso312/iuasd_a91230.jpg",
+              metadata: {
+                takenAt: faker.date.recent(),
+                uploadIp: "12.32.154.34",
+              },
+            },
+          ],
+          profilePicture: {
+            createdAt: faker.date.recent(),
+            uri: "posts/media/Profilepictures_123asd532/123.jpg",
+            metadata: {
+              takenAt: faker.date.recent(),
+              uploadIp: "12.32.154.34",
+            },
+          },
+          profileQuestions: [],
+          religiousViews: ["spiritual"],
+        },
+      },
+      yourTopics: {
+        yourTopics: [
+          "Comedy TV Shows & Movies",
+          "Animation TV Shows & Movies",
+          "Space",
+          "Video Game TV Consoles",
+          "Fantasy TV Shows & Movies",
+          "Fast Food",
+        ],
+      },
+      facebookMarketplace: {
+        itemsSold: [
+          {
+            title: "Ergonomic Keyboard",
+            price: "$20",
+            seller: `${firstName} ${lastName}`,
+            createdOn: faker.date.recent(),
+            updatedOn: faker.date.recent(),
+            category: "Electronics & computers",
+            marketplace: "United States Marketplace",
+            location: {
+              latitude: 33.805983,
+              longitude: 2.866612,
+            },
+            description: "Microsoft natural ergonomic keyboard 4000 v1.0",
+          },
+        ],
+        buyerAndSellerRatings: [
+          {
+            offerText: "Gaming Mouse",
+            date: faker.date.recent(),
+            title: `${firstName} ${lastName} recommended Tom Parker in marketplace.`,
+          },
+        ],
+      },
       adsInformation: {
+        informationYouveSubmittedToAdvertisers: [
+          {
+            label: "Country",
+            value: "US",
+          },
+        ],
+        advertisersUsingYourActivityOrInformation: [
+          {
+            advertiserName: "The Guardian",
+            hasDataFileCustomAudience: false,
+            hasInPersonStoreVisit: false,
+            hasMarketingCustomAudience: true,
+          },
+        ],
         advertsInteractedWith: [
           {
             date: faker.date.recent(),
@@ -23,6 +126,18 @@ export const generateFacebook = (users: Array<{ id: string }>): DbFacebook[] =>
         ],
       },
       appsAndWebsitesOffOfFacebook: {
+        postsFromAppsAndWebsites: [
+          {
+            datePosted: faker.date.recent(),
+            title: `${firstName} ${lastName} posted something via Youtube`,
+            attachments: [
+              {
+                name: "Lion King - Circle of Life",
+                url: "http://www.youtube.com/watch?v=vX07j9SDFcc&feature=autoshare",
+              },
+            ],
+          },
+        ],
         appsAndWebsites: [
           {
             name: "Spotify",

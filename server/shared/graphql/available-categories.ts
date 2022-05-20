@@ -12,6 +12,9 @@ const facebookKeys: NoTypenameKeysObj<Facebook> = {
   facebookNews: true,
   location: true,
   otherLoggedInformation: true,
+  facebookMarketplace: true,
+  yourTopics: true,
+  dating: true,
 };
 const facebook = Object.keys(facebookKeys) as NoTypenameKeys<Facebook>[];
 
