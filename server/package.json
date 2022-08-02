@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "vercel:install": "npm-install-if-needed",
     "gen:gql": "graphql-codegen generate",
     "gen:data": "ts-node ./scripts/gen-mocks.ts",
     "gen:data:clean": "rimraf ./domain/**/data.ts && npm run gen:data",
@@ -46,7 +45,6 @@
     "@types/uuid": "^8.3.4",
     "concurrently": "^7.1.0",
     "nodemon": "^2.0.7",
-    "npm-install-if-needed": "^1.0.17",
     "rimraf": "^3.0.2",
     "ts-loader": "^9.2.8",
     "ts-node": "^10.7.0",
