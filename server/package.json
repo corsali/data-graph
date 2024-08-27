@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@apollo/federation": "^0.36.1",
-    "@apollo/gateway": "^2.0.1",
+    "@apollo/gateway": "^2.8.5",
     "@graphql-codegen/add": "3.1.1",
     "@graphql-codegen/cli": "2.6.2",
     "@graphql-codegen/near-operation-file-preset": "^2.2.9",
