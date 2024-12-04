@@ -4,6 +4,7 @@ export type Categories = typeof categories;
 export type Service = keyof Categories;
 
 export const categories = {
+  sanity: ["sanityData", "notAvailableData"],
   facebook: [
     "ActivityMessages",
     "AdsInformation",
