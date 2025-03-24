@@ -9,6 +9,8 @@ import { DbServiceName } from "./types";
 export const mockNewServiceData: DbServiceName[] = [
   {
     userId: "0x487F1D4eB9ccF6487a26E25192a213A8b6aF0590",
+    // This wallet is @annakaz's public wallet that is used for demos
+    // There is some of Anna's real data (okay to be demoed publicly) attached to this wallet
     // replace `newServiceData` here and in each object below with proper fields defined in schema
     newServiceData: "Example data",
   },
