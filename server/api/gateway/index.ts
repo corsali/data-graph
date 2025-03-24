@@ -22,6 +22,12 @@ const server = new ApolloServer({
       : res,
 });
 
-server.listen({ port: localGatewayPort }).then(({ url }: any) => {
-  console.log(`Gateway now ready at ${url}`);
-});
+// Only call listen() in non-Vercel environments
+if (!process.env.VERCEL) {
+  server.listen({ port: localGatewayPort }).then(({ url }: any) => {
+    console.log(`Gateway now ready at ${url}`);
+  });
+}
+
+export default server;
+module.exports = server;

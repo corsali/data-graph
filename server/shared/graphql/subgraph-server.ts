@@ -18,7 +18,12 @@ export const createSubgraphServer = ({
     introspection: true,
   });
 
-  server.listen({ port: localPortsConfig[name] }).then(({ url }) => {
-    console.log(`${name} service ready at ${url}`);
-  });
+  // Only call listen() in non-Vercel environments
+  if (!process.env.VERCEL) {
+    server.listen({ port: localPortsConfig[name] }).then(({ url }) => {
+      console.log(`${name} service ready at ${url}`);
+    });
+  }
+
+  return server;
 };
