@@ -10,12 +10,13 @@ import {
   defaultQuery,
   useResponsiveEditor,
 } from "@shared/query-editor";
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Typography, useTheme } from "@mui/material";
 import { gqlEndpoint } from "@shared/environment";
 import { useIsMobile } from "@shared/theme";
 
 const App = () => {
   useResponsiveEditor();
+  const theme = useTheme();
   React.useEffect(() => {
     store.getState();
     store.dispatch(editQuery(defaultQuery));
@@ -35,25 +36,43 @@ const App = () => {
         display="flex"
         alignItems="center"
         justifyContent="space-between"
-        pl={{ xs: 0, sm: 4 }}
+        pl={{ xs: 2, sm: 4 }}
         pr={{ xs: 2, sm: 4 }}
         height={64}
         width="100%"
       >
-        <img className="max-h-16" alt="Vana Logo" src="logo.png" />
-        <Box display="flex" alignItems="center" color="primary.dark" gap={3}>
+        {/* Logo with proper spacing using theme spacing units */}
+        <Box 
+          py={theme.spacing(1.5)} 
+          px={theme.spacing(2)}
+          sx={{ 
+            display: 'flex',
+            alignItems: 'center',
+            borderRadius: 1
+          }}
+        >
+          <img className="max-h-10" alt="Vana Data Graph" src="logo.png" />
+        </Box>
+        <Box display="flex" alignItems="center" gap={3}>
           <Button
             size="small"
             component="a"
             href="https://docs.vana.org/docs/data-access-quickstart-guide#/"
             target="_blank"
             rel="noopener noreferrer"
+            sx={{
+              color: 'text.primary',
+              '&:hover': {
+                color: 'primary.main',
+                backgroundColor: 'background.default'
+              }
+            }}
           >
             <Typography
               variant="button"
               fontSize={isMobile ? "0.6rem" : "0.8125rem"}
             >
-              Access Data
+              DOCS
             </Typography>
           </Button>
           {false &&
@@ -61,7 +80,6 @@ const App = () => {
               {({ openModal, categoriesAmount }) =>
                 categoriesAmount ? (
                   <Button
-                    // variant="outlined"
                     size="small"
                     color="inherit"
                     onClick={openModal}
@@ -81,12 +99,23 @@ const App = () => {
           }
           <RequestDataModal>
             {({ openModal }) => (
-              <Button variant="contained" size="small" onClick={openModal}>
+              <Button 
+                variant="contained" 
+                size="small" 
+                onClick={openModal}
+                sx={{
+                  backgroundColor: 'primary.main',
+                  '&:hover': {
+                    backgroundColor: 'primary.dark',
+                  },
+                  textTransform: 'uppercase'
+                }}
+              >
                 <Typography
                   variant="button"
                   fontSize={isMobile ? "0.6rem" : "0.8125rem"}
                 >
-                  Request Specific Data
+                  REQUEST DATA
                 </Typography>
               </Button>
             )}
