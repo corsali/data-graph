@@ -17,6 +17,7 @@
     "start:netflix": "nodemon --ext ts,graphql --watch shared --watch api/netflix --watch domain/netflix --exec 'npm run node -- api/netflix/index.ts'",
     "start:spotify": "nodemon --ext ts,graphql --watch shared --watch api/spotify --watch domain/spotify --exec 'npm run node -- api/spotify/index.ts'",
     "start:telegram": "nodemon --ext ts,graphql --watch shared --watch api/telegram --watch domain/telegram --exec 'npm run node -- api/telegram/index.ts'",
+    "start:oura": "nodemon --ext ts,graphql --watch shared --watch api/oura --watch domain/oura --exec 'npm run node -- api/oura/index.ts'",
     "node": "TS_NODE_TRANSPILE_ONLY=true NODE_OPTIONS=${npm_package_config_node_options} node",
     "postinstall": "npm run gen:gql"
   },

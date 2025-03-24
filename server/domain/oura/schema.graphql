@@ -1,0 +1,21 @@
+type OuraSleepSession {
+  startTime: String!
+  endTime: String!
+  durationHours: Float!
+  sleepScore: Float!
+  deepSleepPercentage: Float!
+  remSleepPercentage: Float!
+  lightSleepPercentage: Float!
+  heartRateAvg: Int
+  readinessScore: Float
+  isNap: Boolean!
+}
+
+type Oura {
+  sleepHistory: [OuraSleepSession]
+}
+
+extend type User @key(fields: "id") {
+  id: ID!
+  oura: Oura
+}

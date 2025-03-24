@@ -26,8 +26,17 @@ query AvailableData {
         timestamp
       }
     }
+    # From biohacker dao, the Oura sleep data DAO
+    oura {
+      sleepHistory {
+        startTime
+        durationHours
+        isNap
+      }
+    }
   }
 }
+
 `;
 
 /* 
