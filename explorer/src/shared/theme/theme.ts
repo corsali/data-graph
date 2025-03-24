@@ -14,12 +14,22 @@ declare module "@mui/material/styles" {
   }
 }
 
+// Complete color palette from slides
 const colorsBase = {
-  irisCore: "#4343FC",    // Renamed from aquaDeep
-  magentaCore: "#DF60FF", // Renamed from neonCarrot
-  greenCore: "#00C600",   // Renamed from bostonBlue
-  frostGray: "#F7F7FF",   // Renamed from soltitude
-  carbon: "#2B2B2B"       // New neutral color
+  // Iris Blue palette
+  irisLight: "#9B8BFF",
+  irisCore: "#4141FC",  
+  irisDark: "#0000FF",
+  
+  // Other brand colors
+  magentaCore: "#DF60FF",
+  greenCore: "#00C600",
+  
+  // Neutrals palette
+  white: "#FFFFFF",
+  frostGray: "#EAEAEA", 
+  stoneBeige: "#BBAD97",
+  carbon: "#161616"    
 };
 
 const variables: ThemeOptions["variables"] = { navDrawerWidth: 200 };
@@ -27,18 +37,28 @@ const variables: ThemeOptions["variables"] = { navDrawerWidth: 200 };
 export const theme = createTheme({
   palette: createPalette({
     primary: {
+      light: colorsBase.irisLight,
       main: colorsBase.irisCore,
-      dark: darken(colorsBase.irisCore, 0.1),
+      dark: colorsBase.irisDark,
+      contrastText: colorsBase.white,
     },
     secondary: {
+      light: colorsBase.white,
       main: colorsBase.magentaCore,
-      light: lighten(colorsBase.magentaCore, 0.2),
+      dark: colorsBase.stoneBeige,
+      contrastText: colorsBase.carbon,
     },
     success: {
       main: colorsBase.greenCore,
     },
-    background: { default: colorsBase.frostGray },
-    text: { primary: colorsBase.carbon },
+    background: { 
+      default: colorsBase.frostGray,
+      paper: colorsBase.white,
+    },
+    text: { 
+      primary: colorsBase.carbon,
+      secondary: colorsBase.irisCore,
+    },
   }),
   breakpoints: {
     values: {
@@ -51,5 +71,32 @@ export const theme = createTheme({
   },
   variables,
   spacing: 4,
-  components: { MuiDialog: { styleOverrides: { root: { width: "100%" } } } },
+  components: { 
+    MuiDialog: { 
+      styleOverrides: { 
+        root: { width: "100%" } 
+      } 
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: 'uppercase',
+          borderRadius: 4,
+        },
+        containedPrimary: {
+          backgroundColor: colorsBase.irisCore,
+          '&:hover': {
+            backgroundColor: colorsBase.irisDark,
+          },
+        },
+      },
+    },
+    MuiTypography: {
+      styleOverrides: {
+        button: {
+          fontWeight: 500,
+        },
+      },
+    },
+  },
 });
