@@ -4,7 +4,7 @@ import { DbInstagram } from "./types";
     
 export const mockInstagramData: DbInstagram[] = [
   {
-    "userId": "00a51c61-0d30-44b0-9508-91c171bed3ef",
+    "userId": "0x8C5fecdC472E27Bc447696F431E425D924a95dAa",
     "adsAndBusinesses": {
       "advertisersUsingYourActivityOrInformation": [
         {
@@ -101,7 +101,7 @@ export const mockInstagramData: DbInstagram[] = [
     ]
   },
   {
-    "userId": "c00e6345-cf68-4945-a12a-ddda34591395",
+    "userId": "0x3dE50685C2a3F1d4833B8CEd55e62Dba3c47BB6a",
     "adsAndBusinesses": {
       "advertisersUsingYourActivityOrInformation": [
         {
@@ -198,7 +198,7 @@ export const mockInstagramData: DbInstagram[] = [
     ]
   },
   {
-    "userId": "89207423-d538-4d66-9e91-2340dff852c1",
+    "userId": "0x5Df62A1285a619A005AE6C2f2F091AAcf2b6DA19",
     "adsAndBusinesses": {
       "advertisersUsingYourActivityOrInformation": [
         {

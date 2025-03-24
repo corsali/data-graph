@@ -1,16 +1,17 @@
 scalar ComingSoon
 
-type Song {
-  id: ID!
+type SpotifyTrack {
+  cover: String!
   title: String!
-  author: String!
+  artist: String!
+  listenedOn: String!
 }
 
 type Spotify {
-  likedSongs: [Song]
+  history: [SpotifyTrack]
 }
 
 extend type User @key(fields: "id") {
   id: ID!
-  spotify: ComingSoon!
+  spotify: Spotify
 }

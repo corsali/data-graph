@@ -4,12 +4,12 @@ import { DbUser } from "./types";
     
 export const mockUserData: DbUser[] = [
   {
-    "id": "00a51c61-0d30-44b0-9508-91c171bed3ef"
+    "id": "0x487F1D4eB9ccF6487a26E25192a213A8b6aF0590"
   },
   {
-    "id": "c00e6345-cf68-4945-a12a-ddda34591395"
+    "id": "0x8C5fecdC472E27Bc447696F431E425D924a95dAa"
   },
   {
-    "id": "89207423-d538-4d66-9e91-2340dff852c1"
+    "id": "0x3dE50685C2a3F1d4833B8CEd55e62Dba3c47BB6a"
   }
 ];

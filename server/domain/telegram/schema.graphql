@@ -1,0 +1,17 @@
+scalar ComingSoon
+
+type TelegramMessage {
+  messageText: String!
+  timestamp: String!
+  isOutgoing: Boolean!
+  hasAttachment: Boolean
+}
+
+type Telegram {
+  messages: [TelegramMessage]
+}
+
+extend type User @key(fields: "id") {
+  id: ID!
+  telegram: Telegram
+}
