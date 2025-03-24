@@ -1,7 +1,8 @@
-export const defaultQuery = `# Currently Supported Queryable Data
+export const defaultQuery = `# Example of Queryable Data
 
 query AvailableData {
   users {
+    # From Knowhere, the Google location data dao
     google {
       locationHistory {
         latitude
@@ -9,11 +10,20 @@ query AvailableData {
         timestamp
       }
     }
-    netflix {
+    # From Unwrapped, the Spotify data dao
+    spotify {
       history {
         title
-        cover
-        watchedOn
+        artist
+        listenedOn
+      }
+    }
+    # From vChars, the Telegram data dao
+    telegram {
+      messages {
+        messageText
+        isOutgoing
+        timestamp
       }
     }
   }
