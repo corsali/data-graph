@@ -8,16 +8,16 @@ import { DbServiceName } from "./types";
 // replace `mockNewServiceData` and `DbServiceName` below with `mock<SERVICE_NAME>Data` and `Db<SERVICE_NAME>`
 export const mockNewServiceData: DbServiceName[] = [
   {
-    userId: "7f3d4ead-0c4a-4ed5-9656-30f914019833",
+    userId: "0x487F1D4eB9ccF6487a26E25192a213A8b6aF0590",
     // replace `newServiceData` here and in each object below with proper fields defined in schema
     newServiceData: "Example data",
   },
   {
-    userId: "f49e6295-b93e-4f21-b2a9-523ff8d4a068",
+    userId: "0x8C5fecdC472E27Bc447696F431E425D924a95dAa",
     newServiceData: "Example data",
   },
   {
-    userId: "ffe449ec-1571-4ce3-bda3-9bcc65e12c8a",
+    userId: "0x3dE50685C2a3F1d4833B8CEd55e62Dba3c47BB6a",
     newServiceData: "Example data",
   },
 ];

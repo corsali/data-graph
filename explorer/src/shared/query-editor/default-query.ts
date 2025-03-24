@@ -2,6 +2,29 @@ export const defaultQuery = `# Currently Supported Queryable Data
 
 query AvailableData {
   users {
+    google {
+      locationHistory {
+        latitude
+        longitude
+        timestamp
+      }
+    }
+    netflix {
+      history {
+        title
+        cover
+        watchedOn
+      }
+    }
+  }
+}
+`;
+
+/* 
+Old query 
+
+query AvailableData {
+  users {
     facebook {
       friendsAndFollowers {
         name
@@ -90,7 +113,7 @@ query AvailableData {
     }
   }
 }
-`;
+*/
 
 // rest of facebook data 
 
