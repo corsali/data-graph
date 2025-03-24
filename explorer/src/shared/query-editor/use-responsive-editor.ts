@@ -14,7 +14,7 @@ export const useResponsiveEditor = () => {
     // remove "Copy curl" button
     headerEl.children[3].remove();
     // remove bottom panel of result
-    editorEl.children[1].children[4].remove();
+    editorEl.children[1].children[4]?.remove();
   }, []);
 
   useEffect(() => {
