@@ -3,12 +3,19 @@ import { ApolloGateway } from "@apollo/gateway";
 import { ApolloServerPluginInlineTraceDisabled } from "apollo-server-core";
 import { localGatewayPort, serviceList } from "../../shared/env";
 
-const gateway = new ApolloGateway({ serviceList });
+// Configure the gateway with proper options for Vercel
+const gateway = new ApolloGateway({ 
+  serviceList,
+  // Add debug mode to get more detailed logs
+  debug: process.env.VERCEL ? true : false,
+});
 
 const server = new ApolloServer({
   gateway,
   plugins: [ApolloServerPluginInlineTraceDisabled],
   introspection: true,
+  // Add a longer timeout for Apollo Server in Vercel
+  stopGracePeriodMillis: 1000, // shorter grace period
   formatResponse: (res) =>
     res.data
       ? {
@@ -29,5 +36,6 @@ if (!process.env.VERCEL) {
   });
 }
 
-export default server;
+// For Apollo Server 2.x, export the server directly
 module.exports = server;
+export default server;

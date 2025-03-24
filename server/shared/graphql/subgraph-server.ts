@@ -16,6 +16,15 @@ export const createSubgraphServer = ({
     schema: buildSubgraphSchema(...subgraphSchemaConfig),
     plugins: [ApolloServerPluginInlineTraceDisabled],
     introspection: true,
+    context: ({ req }) => {
+      const isInternalGateway = req.headers['x-internal-gateway'] === 'true';
+      
+      if (!isInternalGateway && process.env.VERCEL) {
+        console.log('External request to subgraph');
+      }
+      
+      return { isInternalGateway };
+    }
   });
 
   // Only call listen() in non-Vercel environments

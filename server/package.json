@@ -6,7 +6,7 @@
     "gen:gql": "graphql-codegen generate",
     "gen:data": "ts-node ./scripts/gen-mocks.ts",
     "gen:data:clean": "rimraf ./domain/**/data.ts && npm run gen:data",
-    "build": "webpack",
+    "build": "VERCEL=true webpack",
     "start": "concurrently -k npm:start:*",
     "start:rest": "nodemon --ext ts --watch shared --watch api/rest --exec 'npm run node -- api/rest/index.ts'",
     "start:gateway": "node -e \"setTimeout(() => process.exit(0), 1000)\" && nodemon --ext ts --watch shared --watch api/gateway --exec 'npm run node -- api/gateway/index.ts'",

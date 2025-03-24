@@ -3,7 +3,8 @@
   "functions": { "**/*/index.ts": { "memory": 1024 } },
   "rewrites": [
     { "source": "/api/rest/:anything", "destination": "/api/rest" },
-    { "source": "/rest/:anything", "destination": "/rest" }
+    { "source": "/rest/:anything", "destination": "/rest" },
+    { "source": "/api/:service", "destination": "/api/:service" }
   ],
   "headers": [
     {
@@ -11,6 +12,14 @@
       "headers": [
         {
           "key": "access-control-allow-origin",
+          "value": "*"
+        },
+        {
+          "key": "access-control-allow-methods",
+          "value": "*"
+        },
+        {
+          "key": "access-control-allow-headers",
           "value": "*"
         }
       ]
