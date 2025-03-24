@@ -15,10 +15,11 @@ declare module "@mui/material/styles" {
 }
 
 const colorsBase = {
-  aquaDeep: "#0c564c",
-  neonCarrot: "#F99e48",
-  bostonBlue: "#2d84a5",
-  soltitude: "#Dfe9f3",
+  irisCore: "#4343FC",    // Renamed from aquaDeep
+  magentaCore: "#DF60FF", // Renamed from neonCarrot
+  greenCore: "#00C600",   // Renamed from bostonBlue
+  frostGray: "#F7F7FF",   // Renamed from soltitude
+  carbon: "#2B2B2B"       // New neutral color
 };
 
 const variables: ThemeOptions["variables"] = { navDrawerWidth: 200 };
@@ -26,15 +27,18 @@ const variables: ThemeOptions["variables"] = { navDrawerWidth: 200 };
 export const theme = createTheme({
   palette: createPalette({
     primary: {
-      main: colorsBase.neonCarrot,
-      dark: darken(colorsBase.neonCarrot, 0.1),
+      main: colorsBase.irisCore,
+      dark: darken(colorsBase.irisCore, 0.1),
     },
     secondary: {
-      main: colorsBase.bostonBlue,
-      light: lighten(colorsBase.bostonBlue, 0.2),
+      main: colorsBase.magentaCore,
+      light: lighten(colorsBase.magentaCore, 0.2),
     },
-    background: { default: "#dbdee0" },
-    text: { primary: "#1e293b" },
+    success: {
+      main: colorsBase.greenCore,
+    },
+    background: { default: colorsBase.frostGray },
+    text: { primary: colorsBase.carbon },
   }),
   breakpoints: {
     values: {

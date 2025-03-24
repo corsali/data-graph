@@ -5,10 +5,10 @@ module.exports = {
   theme: {
     extend: {},
     colors: {
-      "aqua-deep": "#0c564c",
-      "neon-carrot": "#F99e48",
-      "boston-blue": "#2d84a5",
-      soltitude: "#Dfe9f3",
+      "aqua-deep": "#4343FC", // Replaced with Iris Core blue
+      "neon-carrot": "#DF60FF", // Replaced with Magenta Core
+      "boston-blue": "#00C600", // Replaced with Green Core
+      "soltitude": "#F7F7FF", // Replaced with Frost Gray
     },
   },
   plugins: [],
