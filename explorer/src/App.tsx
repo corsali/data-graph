@@ -42,27 +42,43 @@ const App = () => {
       >
         <img className="max-h-16" alt="Vana Logo" src="logo.png" />
         <Box display="flex" alignItems="center" color="primary.dark" gap={3}>
-          <PendingCategoriesModal>
-            {({ openModal, categoriesAmount }) =>
-              categoriesAmount ? (
-                <Button
-                  variant="outlined"
-                  size="small"
-                  color="inherit"
-                  onClick={openModal}
-                >
-                  <Typography
-                    variant="button"
-                    fontSize={isMobile ? "0.6rem" : "0.8125rem"}
+          <Button
+            size="small"
+            component="a"
+            href="https://docs.vana.org/docs/data-access-quickstart-guide#/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Typography
+              variant="button"
+              fontSize={isMobile ? "0.6rem" : "0.8125rem"}
+            >
+              Access Data
+            </Typography>
+          </Button>
+          {false &&
+            <PendingCategoriesModal>
+              {({ openModal, categoriesAmount }) =>
+                categoriesAmount ? (
+                  <Button
+                    // variant="outlined"
+                    size="small"
+                    color="inherit"
+                    onClick={openModal}
                   >
-                    Data coming soon ({categoriesAmount})
-                  </Typography>
-                </Button>
-              ) : (
-                <></>
-              )
-            }
-          </PendingCategoriesModal>
+                    <Typography
+                      variant="button"
+                      fontSize={isMobile ? "0.6rem" : "0.8125rem"}
+                    >
+                      Data coming soon ({categoriesAmount})
+                    </Typography>
+                  </Button>
+                ) : (
+                  <></>
+                )
+              }
+            </PendingCategoriesModal>
+          }
           <RequestDataModal>
             {({ openModal }) => (
               <Button variant="contained" size="small" onClick={openModal}>
@@ -70,7 +86,7 @@ const App = () => {
                   variant="button"
                   fontSize={isMobile ? "0.6rem" : "0.8125rem"}
                 >
-                  Contact Us
+                  Request Specific Data
                 </Typography>
               </Button>
             )}
